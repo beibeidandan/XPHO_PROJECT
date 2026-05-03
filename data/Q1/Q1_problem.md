@@ -20,11 +20,11 @@ Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy 
 
 Consider the tether system initially moving in a stable circular orbit of radius $r$ ($r \gg L$) in the Earth’s equatorial plane. The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. The center of mass of the system moves at the Keplerian velocity $v$.
 
-**A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. **[1.2 pt]**
+**A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. Express your result in terms of $G$, $M_E$, $m$, $L$, and $r$. **[1.2 pt]**
 
 **A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Calculate the magnitude of this EMF, $\mathcal{E}$, as a function of $r$, $L$, and the given planetary constants. **[1.0 pt]**
 
-**A.3.** Determine the polarity of the induced EMF. Which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
+**A.3.** Determine the polarity of the induced EMF, in other words, which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
 
 ---
 
@@ -34,7 +34,7 @@ The tether is immersed in the ionospheric plasma, which is a dilute ionized gas.
 
 **B.1.** Derive the expression for the total Lorentz force $\vec{F}_L$ acting on the tether. Show that this force acts in the direction exactly opposite to the orbital velocity vector $\vec{v}$. **[1.0 pt]**
 
-**B.2.** Due to the work done by the Lorentz force, the system's mechanical energy dissipates, causing the orbit to decay. Assuming the orbit remains quasi-circular at all times, derive the differential equation for the rate of change of the orbital radius, $dr/dt$, in terms of $I, B(r), L, m, M_E$, and $r$. **[1.5 pt]**
+**B.2.** Due to the work done by the Lorentz force, the system's mechanical energy dissipates, causing the orbit to decay. Assuming the orbit remains quasi-circular at all times, derive the differential equation for the rate of change of the orbital radius, $dr/dt$, in terms of $I, B_0 L, m, M_E, R_E$, and $r$. **[1.5 pt]**
 
 **B.3.** Let $Q$ be the total charge transferred through the tether as the system descends from an initial radius $r_1$ to a final radius $r_2$. Prove that $Q = \int I dt$ depends only on $r_1, r_2$, and the planetary constants ($M_E, R_E, B_0$), but is independent of the tether's resistance $R$ or the specific time-evolution of the current. Find the expression for $Q$. **[1.5 pt]**
 
@@ -48,7 +48,7 @@ In a realistic scenario, the current $I$ is limited by the ability of the tether
 *   Stefan-Boltzmann Law: The power radiated by a surface area $S$ with emissivity $\epsilon$ at temperature $T$ is $P_{rad} = \epsilon \sigma S T^4$, where $\sigma$ is the Stefan-Boltzmann constant.
 *   Richardson’s Law for thermionic emission: The saturation current $I$ emitted by a surface $S_{emit}$ at temperature $T$ is given by $I = S_{emit} A_R T^2 \exp\left(-\frac{\Phi}{k_B T}\right)$, where $A_R$ is Richardson's constant and $\Phi$ is the work function.
 
-**C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$) and the local EMF $\mathcal{E}$. **[1.2 pt]**
+**C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. The whole system is of the same temperature. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$, so the energy carried away can be approximately written as $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Assume the total surface area of the system is $S$, and $S_{emit}=\eta S$. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$) and the local EMF $\mathcal{E}$. **[1.2 pt]**
 
 **C.2.** Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., $I^2 R \gg I\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \gg \Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of the tether's material/geometric constants ($S, \epsilon, R, L$), the satellites' mass $m$, and the local orbital parameters ($B, v, r$). **[1.8 pt]**
 
@@ -94,7 +94,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 # Answer
 ### Part A
 **[A.1's Standard Solution]**
-- **[Physical Principles]**: In a rotating frame centered at the CM (radius $r$) with angular velocity $\omega = \sqrt{G M_E / r^3}$, the net radial force on a mass $m$ at distance $x$ from the CM is the sum of the gravitational force and the centrifugal force.
+- **[Physical Principles]**: In a rotating frame centered at the CM (radius $r$) with angular velocity $\omega = \sqrt{G M_E / r^3}$, the net radial force on a mass $m$ at distance $x$ from the CM is the sum of the gravitational force, the centrifugal force and the inertial force caused by the acceleration of the CM.
 - **[Equations]**:
   The effective radial force is:
   $$F_{eff} = m \omega^2 (r+x) - \frac{G M_E m}{(r+x)^2} \quad (1)$$
@@ -149,14 +149,14 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   $Q = \int I dt = \int \frac{I}{dr/dt} dr$. From B.2: $I dt = -\frac{m \sqrt{G M_E}}{B(r) L r^{3/2}} dr$.
   $$Q = \int_{r_2}^{r_1} \frac{m \sqrt{G M_E}}{(B_0 R_E^3 r^{-3}) L r^{3/2}} dr = \frac{m \sqrt{G M_E}}{B_0 R_E^3 L} \int_{r_2}^{r_1} r^{3/2} dr$$
 - **[Final Result]**:
-  $$Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$$
+  $$Q = \frac{2m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$$
 
 ---
 
 ### Part C
 **[C.1's Standard Solution]**
 - **[Equations]**:
-  1. Energy balance: $I^2 R = \epsilon \sigma S T_{eq}^4 + \frac{I \Phi}{e}$
+  1. Energy balance: $I_{sat}^2 R = \epsilon \sigma S T_{eq}^4 + \frac{I_{sat} \Phi}{e}$
   2. Current balance: $I_{sat} = \eta S A_R T_{eq}^2 \exp\left(-\frac{\Phi}{k_B T_{eq}}\right)$
 
 **[C.2's Standard Solution]**
