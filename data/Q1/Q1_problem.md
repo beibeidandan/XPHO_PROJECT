@@ -18,7 +18,7 @@ Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy 
 
 ### Part A: Orbital Dynamics and Motional EMF (3.0 points)
 
-Consider the tether system initially moving in a stable circular orbit of radius $r$ ($r \gg L$) in the Earth’s equatorial plane. The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. The center of mass of the system moves at the Keplerian velocity $v$.
+Consider the tether system initially moving from east to west in a stable circular orbit of radius $r$ ($r \gg L$) in the Earth’s equatorial plane. The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. The center of mass of the system moves at the Keplerian velocity $v$.
 
 **A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. Express your result in terms of $G$, $M_E$, $m$, $L$, and $r$. **[1.2 pt]**
 
@@ -50,7 +50,7 @@ In a realistic scenario, the current $I$ is limited by the ability of the tether
 
 **C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. The whole system is of the same temperature. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$, so the energy carried away can be approximately written as $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Assume the total surface area of the system is $S$, and $S_{emit}=\eta S$. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$) and the local EMF $\mathcal{E}$. **[1.2 pt]**
 
-**C.2.** Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., $I^2 R \gg I\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \gg \Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of the tether's material/geometric constants ($S, \epsilon, R, L$), the satellites' mass $m$, and the local orbital parameters ($B, v, r$). **[1.8 pt]**
+**C.2.** Consider a limit where the system is driven to extreme temperatures such that thermal radiation dominates the emission cooling (i.e., $\epsilon \sigma S T^4 \gg I\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \gg \Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of the tether's material/geometric constants ($S, \epsilon, R, L$), the satellites' mass $m$, and the local orbital parameters ($B, v, r$). **[1.8 pt]**
 
 # QuestionReview
 ### [1] Final Assessment Conclusion
@@ -130,10 +130,10 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 - **[Physical Principles]**: The Lorentz force is $d\vec{F}_L = I d\vec{l} \times \vec{B}$.
 - **[Derivation Steps]**:
   The induced EMF drives a current $I$ from the lower potential (inner) to the higher potential (outer) satellite through the tether. Thus, $d\vec{l}$ is in the $+\hat{r}$ direction.
-  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int I B(r') (-\hat{\phi}) dr'$$
+  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int I B(r') (-\hat{\phi}) dr'\approx -\frac{I B_0 R_E^3 L}{r^3}\hat{\phi}$$
   Since the orbital velocity $\vec{v}$ is in the $+\hat{\phi}$ direction, $\vec{F}_L$ is exactly opposite to $\vec{v}$.
 - **[Final Result]**:
-  The total force is $\vec{F}_L \approx - I B(r) L \hat{v}$.
+  The total force is $-\frac{I B_0 R_E^3 L}{r^3}\hat{\phi}$.
 
 **[B.2's Standard Solution]**
 - **[Equations]**:
@@ -247,7 +247,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 | :--- | :--- | :--- | :--- |
 | **B.1** | **Lorentz Force primitive:** $d\vec{F}_L = I d\vec{l} \times \vec{B}$ | 0.3 | Accept integral or macroscopic form $\vec{F}_L = I \vec{L} \times \vec{B}$. |
 | | **Current direction & cross product:** Identifying current flows from inner to outer satellite (low to high potential), so $d\vec{l} = \hat{r} dr$. | 0.3 | |
-| | **Magnitude and Direction:** $F_L = I B(r) L$ and explicitly stating or proving it points opposite to $\vec{v}$ (i.e., $-\hat{\phi}$ direction). | 0.4 | 0.2 for magnitude, 0.2 for direction. |
+| | **Magnitude and Direction:** $-\frac{I B_0 R_E^3 L}{r^3}\hat{\phi}$ and explicitly stating or proving it points opposite to $\vec{v}$ (i.e., $-\hat{\phi}$ direction). | 0.4 | 0.2 for magnitude, 0.2 for direction. |
 | | | | **1.0 pt Total for B.1** |
 | **B.2** | **Total Energy / Angular Momentum:** $E_{tot} = -\frac{GM_E (2m)}{2r} = -\frac{GM_E m}{r}$ <br>*(Alt: $L_{ang} = 2mvr$)* | 0.4 | **Trap:** Forgetting there are *two* satellites (mass $2m$). Deduct 0.2 if total energy is written as $-GM_E m / (2r)$. |
 | | **Power / Torque relation:** $\frac{dE}{dt} = \vec{F}_L \cdot \vec{v} = -I B L v$<br>*(Alt: $\frac{dL_{ang}}{dt} = \tau = -I B L r$)* | 0.4 | Must include the negative sign indicating dissipation. |
@@ -295,7 +295,9 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
     -   **A.1 Tidal Force Method:** Students may bypass the rotating frame entirely and use the tidal force gradient $\Delta F_g \approx \frac{2GM_E m}{r^3} \Delta r$ plus the differential centrifugal force $\Delta F_c \approx m\omega^2 \Delta r$. Summing these explicitly to get $\frac{3GM_Em \Delta r}{r^3}$ is mathematically identical and receives full physical principle marks.
     -   **B.2 Angular Momentum Method:** Instead of Energy ($E$), students may use Angular Momentum ($L_{ang} = 2mvr = 2m\sqrt{GM_E r}$) and set the rate of change equal to the external magnetic torque ($\tau = -I B L r$). This is an elegant alternative. Award 0.4 for $L_{ang}$, 0.4 for torque, 0.4 for taking the derivative, and 0.3 for the final result.
 
-![](image/ipho_2025_1_1.png)
+
+![](image/model-teacher_2026_1_1.png)
+![](image/model-teacher_2026_1_2.png)
 
 # DiagramCode
 ### [1] Visual Strategy Plan
