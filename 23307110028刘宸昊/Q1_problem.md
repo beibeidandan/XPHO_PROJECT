@@ -1,4 +1,4 @@
-﻿
+
 # Question
 # Orbital Decay and Electro-Thermal Equilibrium of an Electrodynamic Tether
 ### Introduction
@@ -12,6 +12,7 @@ Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy 
 *   The mechanical energy of a circular orbit with radius $r$ for a total mass $M_{tot}$ is $E = -\frac{G M_E M_{tot}}{2r}$.
 *   For any $x \ll 1$, the approximation $(1+x)^n \approx 1 + nx$ may be used.
 *   The effective emission area of the cathode is $S_{emit} = \eta S$, where $S$ is the total surface area of the tether and $\eta$ is a dimensionless factor.
+*   Unless stated otherwise, the diagrams use the sign convention $\vec v=+\hat\phi$ and $\vec B=+\hat z$ (out of the page), so $\vec v\times\vec B=+\hat r$ points radially outward.
 
 ---
 
@@ -23,7 +24,7 @@ Consider the tether system initially moving in a stable circular orbit of radius
 
 **A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Give the expression of this EMF, $\mathcal{E}$, as a function of $r$, $L$. **[1.0 pt]**
 
-**A.3.** Determine the polarity of the induced EMF, in other words, which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
+**A.3.** Using the direction convention shown in Figure 1, namely $\vec v=+\hat\phi$ and $\vec B=+\hat z$ so that $\vec v\times\vec B$ points radially outward, determine the polarity of the induced EMF. Which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
 
 ---
 
@@ -35,7 +36,7 @@ The tether is immersed in the ionospheric plasma, which is a dilute ionized gas.
 
 **B.2.** Due to the work done by the Lorentz force, the system's mechanical energy dissipates, causing the orbit to decay. Assuming the orbit remains quasi-circular at all times, derive the differential equation for the rate of change of the orbital radius, $dr/dt$, in terms of $I, B_0 L, m, M_E, R_E$, and $r$. **[1.5 pt]**
 
-**B.3.** Let $Q$ be the total charge transferred through the tether as the system descends from an initial radius $r_1$ to a final radius $r_2$. Prove that $Q = \int I dt$ depends only on $r_1, r_2$, and the planetary constants ($M_E, R_E, B_0$), but is independent of the tether's resistance $R$ or the specific time-evolution of the current. Find the expression for $Q$. **[1.5 pt]**
+**B.3.** Let $Q$ be the total charge transferred through the tether as the system descends from an initial radius $r_1$ to a final radius $r_2$. Prove that $Q=\int I dt$ is independent of the tether resistance $R$ and of the detailed time-evolution of the current, and find $Q$ in terms of $r_1$, $r_2$, $m$, $L$, and the planetary constants $M_E$, $R_E$, and $B_0$. **[1.5 pt]**
 
 ---
 
@@ -116,23 +117,23 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   $$\mathcal{E} = B_0 R_E^3 L \sqrt{\frac{G M_E}{r^7}}$$
 
 **[A.3's Standard Solution]**
-- **[Physical Principles]**: The induced electric field is $\vec{E}_{ind} = \vec{v} \times \vec{B}$. In the Earth's equatorial plane, $\vec{v}$ is along the orbital tangent and $\vec{B}$ is directed toward the geographic North.
+- **[Physical Principles]**: The magnetic force on positive charges is $q\vec v\times\vec B$. Under the sign convention in Figure 1, $\vec v=+\hat\phi$ and $\vec B=+\hat z$; therefore $\vec v\times\vec B=+\hat r$.
 - **[Derivation Steps]**:
-  Using the right-hand rule, $\vec{v} \times \vec{B}$ points radially outward (away from Earth's center). Positive charges will therefore accumulate at the end further from Earth.
+  Positive charges are driven radially outward along the tether. Therefore the outer, farther satellite is at positive potential. If the direction of $\vec B$ or the orbital direction were reversed, the polarity would reverse.
 - **[Final Result]**:
-  The satellite **farther from Earth** accumulates positive charges.
+  For the stated convention, the satellite **farther from Earth** accumulates positive charges.
 
 ---
 
 ### Part B
 **[B.1's Standard Solution]**
-- **[Physical Principles]**: The Lorentz force is $d\vec{F}_L = I d\vec{l} \times \vec{B}$.
+- **[Physical Principles]**: The Lorentz force on a current-carrying wire is $d\vec F_L=I d\vec l\times\vec B$.
 - **[Derivation Steps]**:
-  The induced EMF drives a current $I$ from the lower potential (inner) to the higher potential (outer) satellite through the tether. Thus, $d\vec{l}$ is in the $+\hat{r}$ direction.
-  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int I B(r') (-\hat{\phi}) dr'$$
-  Since the orbital velocity $\vec{v}$ is in the $+\hat{\phi}$ direction, $\vec{F}_L$ is exactly opposite to $\vec{v}$.
+  In the chosen sign convention, the motional EMF drives conventional current inside the tether from the inner end to the outer end; the plasma supplies the return path. Thus $d\vec l=\hat r\,dr'$. With $\vec B=B\hat z$,
+  $$\vec F_L=\int I(\hat r\,dr')\times (B(r')\hat z)\simeq -IB(r)L\hat\phi.$$
+  Since the orbital velocity is $\vec v=v\hat\phi$, the Lorentz force is opposite to the velocity. If the magnetic-field direction and current polarity were reversed together, the passive-drag result remains fixed by Lenz's law.
 - **[Final Result]**:
-  The total force is $\vec{F}_L \approx - I B(r) L \hat{v}$.
+  $$\vec F_L\approx -I B(r)L\hat v.$$
 
 **[B.2's Standard Solution]**
 - **[Equations]**:
@@ -156,30 +157,33 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 **[C.1's Standard Solution]**
 - **[Equations]**:
   1. Energy balance:
-     $$I_{sat}^2 R = \epsilon \sigma S T_{eq}^4 + \frac{I_{sat} \Phi}{e}.$$
-  2. Richardson saturation current:
-     $$I_{sat} = \eta S A_R T_{eq}^2 \exp\left(-\frac{\Phi}{k_B T_{eq}}\right).$$
-  These two equations determine $T_{eq}$ and $I_{sat}$ in the saturation-current regime.
-- **[Self-consistency condition involving the EMF]**:
-  The assumed saturation regime requires the available motional EMF to be large enough to drive the saturated current through the tether resistance,
-  $$\mathcal{E} \ge I_{sat}R,$$
-  up to any contact-potential corrections not included in the simplified model.
+     $$I_{sat}^2R=\epsilon\sigma S T_{eq}^4+\frac{I_{sat}\Phi}{e}.$$
+  2. Richardson current balance:
+     $$I_{sat}=\eta S A_R T_{eq}^2\exp\left(-\frac{\Phi}{k_BT_{eq}}\right).$$
+  3. EMF availability condition for the assumed saturation-current regime:
+     $$\mathcal E\ge I_{sat}R,$$
+     up to any contact-potential corrections not included in the simplified model.
 - **[Final Result]**:
-  $$I_{sat}^2 R = \epsilon \sigma S T_{eq}^4 + \frac{I_{sat} \Phi}{e},\qquad
-  I_{sat} = \eta S A_R T_{eq}^2 \exp\left(-\frac{\Phi}{k_B T_{eq}}\right),\qquad
-  \mathcal{E} \ge I_{sat}R.$$
+  $$I_{sat}^2R=\epsilon\sigma S T_{eq}^4+I_{sat}\Phi/e,\qquad
+  I_{sat}=\eta S A_R T_{eq}^2\exp\left(-\frac{\Phi}{k_BT_{eq}}\right),\qquad
+  \mathcal E\ge I_{sat}R.$$
 
 **[C.2's Standard Solution]**
 - **[Derivation Steps]**:
-  In the limit $I^2 R \gg I \Phi/e$ and $k_B T \gg \Phi$, the thermal equations reduce to the consistency relations
-  $$I^2R\approx \epsilon\sigma S T^4,\qquad I_{sat}\approx \eta S A_R T^2.$$
-  At the tipping point, the saturation current is just equal to the current allowed by the available EMF and the tether resistance:
-  $$I=I_{sat}=\frac{\mathcal{E}}{R}=\frac{BvL}{R}.$$
-  Substituting this into the magnitude of the orbital-decay equation from B.2,
+  In the high-temperature limit, the thermal balance and Richardson law give the consistency relations
+  $$I^2R\simeq \epsilon\sigma S T^4,$$
+  $$I_{sat}\simeq \eta S A_R T^2\left(1-\frac{\Phi}{k_BT}\right).$$
+  At the tipping point, the saturation current is just equal to the current allowed by the available motional EMF and the tether resistance:
+  $$I=I_{sat}=\frac{\mathcal E}{R}=\frac{BvL}{R}.$$
+  Therefore the temperature required for thermal consistency is approximately
+  $$T\simeq\left(\frac{B^2v^2L^2}{R\epsilon\sigma S}\right)^{1/4},$$
+  together with
+  $$\frac{BvL}{R}\simeq \eta S A_R T^2\left(1-\frac{\Phi}{k_BT}\right).$$
+  Substituting $I=BvL/R$ into the magnitude of the B.2 decay equation,
   $$\left|\frac{dr}{dt}\right|=\frac{IBLr}{mv},$$
-  gives
+  yields
   $$\left|\frac{dr}{dt}\right|=\frac{(BvL/R)BLr}{mv}=\frac{B^2L^2r}{mR}.$$
-  The parameters $S$ and $\epsilon$ set the thermal consistency condition for reaching the tipping point, but they cancel from the final mechanical decay rate once $I=\mathcal{E}/R$ is imposed.
+  Thus $S$ and $\epsilon$ enter the thermal consistency conditions but cancel from the final mechanical decay-rate expression.
 - **[Final Result]**:
   $$\left|\frac{dr}{dt}\right|=\frac{B^2L^2r}{mR}.$$
 
@@ -272,7 +276,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 | **B.3** | **Integral setup & variable substitution:** $Q = \int I dt = \int I \left(\frac{dt}{dr}\right) dr$ | 0.5 | |
 | | **Canceling Current ($I$):** Substituting $dt/dr$ from B.2: $I dt = -\frac{m\sqrt{GM_E}}{B(r) L r^{3/2}} dr$, explicitly showing $I$ cancels. | 0.5 | **ECF:** If a model error in B.2 prevents $I$ from canceling, award 0 marks from this point onward (model collapse). |
 | | **Integration:** Correctly integrating $\int r^{3/2} dr = \frac{2}{5}r^{5/2}$ | 0.3 | Limits must correspond correctly ($r_1 \to r_2$ with $r_1 > r_2$ or absorbing the negative sign). |
-| | **Final Result:** $Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$ | 0.2 | Expression devoid of $I(t)$ or $R$ automatically satisfies the "prove" requirement. <br>**1.5 pts Total for B.3** |
+| | **Final Result:** $Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$ | 0.2 | Expression devoid of $I(t)$ or $R$ satisfies the independence requirement, while the dependence on $m$ and $L$ is physically retained. <br>**1.5 pts Total for B.3** |
 | **Subtotal** | **Part B Total** | **4.0** | |
 
 ---
@@ -469,5 +473,4 @@ if __name__ == "__main__":
     generate_figure_2()
     print("All figures generated for IPhO Problem 1.")
 ```
-
 

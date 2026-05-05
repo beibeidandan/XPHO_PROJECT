@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "标注基础信息": {
       "来源": "model-teacher",
@@ -47,16 +47,14 @@
         "The tether is massless and has length $L$.",
         "The center of mass moves in a circular orbit of radius $r$.",
         "The tether is radially oriented and $r\\gg L$.",
-        "Use $\\omega^2=GM_E/r^3$ for the circular orbit."
+        "Use $\\omega^2=GM_E/r^3$ for the circular orbit.",
+        "Because the satellites have equal mass and the tether is massless, the satellite radii are $r-L/2$ and $r+L/2$ to leading order.",
+        "Only first-order terms in $L/r$ are retained."
       ],
       "隐性条件": [
         {
           "条件原文": "The mass of the tether is negligible.",
           "隐藏条件": "The tension is uniform along the tether, so the midpoint tension equals the end tension."
-        },
-        {
-          "条件原文": "Use a first-order Taylor expansion in $L/r$.",
-          "隐藏条件": "Terms of order $(L/r)^2$ and higher are neglected."
         }
       ]
     },
@@ -194,12 +192,12 @@
       "版块3": "A3"
     },
     "题目信息": {
-      "背景信息": "The system consists of two identical satellites of mass $m$ connected by a massless conductive tether of length $L$ and resistance $R$ in a circular equatorial orbit of radius $r$. The Earth's magnetic field is perpendicular to the orbital plane and has magnitude $B(r)=B_0(R_E/r)^3$. The circular-orbit speed is $v=\\sqrt{GM_E/r}$ and $r\\gg L$ so first-order expansions in $L/r$ are allowed.",
-      "上下文": "A radial, massless tether joining two satellites in an equatorial circular orbit is analyzed in the co-rotating center-of-mass frame.",
+      "背景信息": "The system consists of two identical satellites of mass $m$ connected by a massless conductive tether of length $L$ and resistance $R$ in a circular equatorial orbit of radius $r$. The Earth's magnetic field is perpendicular to the orbital plane and has magnitude $B(r)=B_0(R_E/r)^3$. The circular-orbit speed is $v=\\sqrt{GM_E/r}$ and $r\\gg L$ so first-order expansions in $L/r$ are allowed. The figures and sign convention take the orbit as prograde, $\\vec v=+\\hat\\phi$, and the magnetic field as $+\\hat z$ out of the page, so $\\vec v\\times\\vec B=+\\hat r$ points radially outward.",
+      "上下文": "A radial, massless tether joining two satellites in an equatorial circular orbit is analyzed in the co-rotating center-of-mass frame. The polarity statement uses the direction convention shown in Figure 1: $\\vec B$ is out of the page and $\\vec v\\times\\vec B$ points away from Earth.",
       "问题原文": "Determine the polarity of the induced EMF, in other words, which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**\n\n---",
-      "改造后问题": "Which end of the tether is at positive potential: the satellite closer to Earth or the satellite farther from Earth?",
-      "核心思路": "Apply the right-hand rule to the force on positive charges, $q\\vec v\\times\\vec B$.",
-      "解答过程": "- **[Physical Principles]**: The induced electric field is $\\vec{E}_{ind} = \\vec{v} \\times \\vec{B}$. In the Earth's equatorial plane, $\\vec{v}$ is along the orbital tangent and $\\vec{B}$ is directed toward the geographic North.\n- **[Derivation Steps]**:\n  Using the right-hand rule, $\\vec{v} \\times \\vec{B}$ points radially outward (away from Earth's center). Positive charges will therefore accumulate at the end further from Earth.\n- **[Final Result]**:\n  The satellite **farther from Earth** accumulates positive charges.\n\n---",
+      "改造后问题": "Under the direction convention $\\vec v\\times\\vec B$ radially outward, which end of the tether is at positive potential: the satellite closer to Earth or the satellite farther from Earth?",
+      "核心思路": "Apply the right-hand rule to the force on positive charges, $q\\vec v\\times\\vec B$; with the stated sign convention this force points radially outward.",
+      "解答过程": "- **[Physical Principles]**: The magnetic force on positive charges is $q\\vec v\\times\\vec B$. Under the sign convention in the figure, $\\vec v=+\\hat\\phi$ and $\\vec B=+\\hat z$, hence $\\vec v\\times\\vec B=+\\hat r$.\n- **[Derivation Steps]**:\n  Positive charges are driven radially outward along the tether. Therefore the outer, farther satellite is at positive potential. If the direction of $\\vec B$ or the orbital direction were reversed, the polarity would reverse.\n- **[Final Result]**:\n  For the stated convention, the satellite **farther from Earth** accumulates positive charges.",
       "最终答案": [
         "The satellite farther from Earth accumulates positive charges."
       ],
@@ -230,12 +228,17 @@
       "显性条件": [
         "The tether moves tangentially in the equatorial plane.",
         "The magnetic field is perpendicular to the orbital plane.",
-        "The tether is radial."
+        "The tether is radial.",
+        "The adopted sign convention is $\\vec v=+\\hat\\phi$ and $\\vec B=+\\hat z$, so $\\vec v\\times\\vec B=+\\hat r$."
       ],
       "隐性条件": [
         {
           "条件原文": "Determine the polarity of the induced EMF.",
           "隐藏条件": "The positive-potential end is the end toward which positive charges are driven by $\\vec v\\times\\vec B$."
+        },
+        {
+          "条件原文": "The magnetic field is perpendicular to the orbital plane.",
+          "隐藏条件": "A polarity conclusion requires choosing the sign of the perpendicular field and the orbital direction; here the figure fixes the convention so that $\\vec v\\times\\vec B$ points outward."
         }
       ]
     },
@@ -252,7 +255,7 @@
         "Charge Separation"
       ]
     ],
-    "物理场景": "Positive charges in the moving tether are pushed radially outward by $\\vec v\\times\\vec B$.",
+    "物理场景": "Positive charges in the moving tether are pushed radially outward by $\\vec v\\times\\vec B$ under the direction convention shown in Figure 1.",
     "判分标准": [
       "Award 0.4 pt if the answer correctly directional logic: Applying right-hand rule for $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ or $\\vec{E}_{ind} = \\vec{v} \\times \\vec{B}$. Otherwise, award 0 pt.",
       "Award 0.4 pt if the answer correctly conclusion: The satellite farther from Earth accumulates positive charges. Otherwise, award 0 pt."
@@ -270,12 +273,12 @@
       "版块3": "B1"
     },
     "题目信息": {
-      "背景信息": "The Earth’s magnetic field can be modeled as a magnetic dipole. In the equatorial plane, the magnetic field is strictly perpendicular to the orbital plane.\nThe magnitude of the magnetic field at a distance $r$ from the Earth's center is given by:\n    $$B(r) = B_0 \\left( \\frac{R_E}{r} \\right)^3$$\n    where $R_E$ is the Earth's radius and $B_0$ is the magnetic field strength at the surface on the equator.\nThe mechanical energy of a circular orbit with radius $r$ for a total mass $M_{tot}$ is $E = -\\frac{G M_E M_{tot}}{2r}$.\nFor any $x \\ll 1$, the approximation $(1+x)^n \\approx 1 + nx$ may be used.\nThe effective emission area of the cathode is $S_{emit} = \\eta S$, where $S$ is the total surface area of the tether and $\\eta$ is a dimensionless factor.",
+      "背景信息": "The Earth’s magnetic field can be modeled as a magnetic dipole. In the equatorial plane, the magnetic field is strictly perpendicular to the orbital plane.\nThe magnitude of the magnetic field at a distance $r$ from the Earth's center is given by:\n    $$B(r) = B_0 \\left( \\frac{R_E}{r} \\right)^3$$\n    where $R_E$ is the Earth's radius and $B_0$ is the magnetic field strength at the surface on the equator.\nThe mechanical energy of a circular orbit with radius $r$ for a total mass $M_{tot}$ is $E = -\\frac{G M_E M_{tot}}{2r}$.\nFor any $x \\ll 1$, the approximation $(1+x)^n \\approx 1 + nx$ may be used.\nThe effective emission area of the cathode is $S_{emit} = \\eta S$, where $S$ is the total surface area of the tether and $\\eta$ is a dimensionless factor. The force direction below uses the same convention as Part A: $\\vec v=+\\hat\\phi$, $\\vec B=+\\hat z$, and the conventional current in the tether is taken radially outward.",
       "上下文": "---\n\n![](image/Figure_2.png)\n\n### Part B: Electrodynamic Drag and Orbital Evolution (4.0 points)\n\nThe tether is immersed in the ionospheric plasma, which is a dilute ionized gas. By using specialized contactors at the ends of the tether (e.g., a hollow cathode at the lower end and an electron collection tether at the upper end), the circuit is closed through the ambient plasma. The plasma acts as a return path with negligible resistance. A steady current $I$ flows through the tether.",
       "问题原文": "Derive the expression for the total Lorentz force $\\vec{F}_L$ acting on the tether. Show that this force acts in the direction exactly opposite to the orbital velocity vector $\\vec{v}$. **[1.0 pt]**",
       "改造后问题": "Find the leading-order Lorentz force on the tether: $\\vec F_L=\\underline{\\hspace{2cm}}$, and state its direction relative to $\\vec v$.",
-      "核心思路": "Integrate $I d\\vec l\\times\\vec B$ along the radial tether and use the current direction set by the induced EMF.",
-      "解答过程": "- **[Physical Principles]**: The Lorentz force is $d\\vec{F}_L = I d\\vec{l} \\times \\vec{B}$.\n- **[Derivation Steps]**:\n  The induced EMF drives a current $I$ from the lower potential (inner) to the higher potential (outer) satellite through the tether. Thus, $d\\vec{l}$ is in the $+\\hat{r}$ direction.\n  $$\\vec{F}_L = \\int_{r-L/2}^{r+L/2} I (\\hat{r} dr') \\times (B(r') \\hat{z}) = \\int I B(r') (-\\hat{\\phi}) dr'$$\n  Since the orbital velocity $\\vec{v}$ is in the $+\\hat{\\phi}$ direction, $\\vec{F}_L$ is exactly opposite to $\\vec{v}$.\n- **[Final Result]**:\n  The total force is $\\vec{F}_L \\approx - I B(r) L \\hat{v}$.",
+      "核心思路": "Integrate $I d\\vec l\\times\\vec B$ along the radial tether, using the motional EMF convention that drives conventional current inside the tether from the inner end to the outer end.",
+      "解答过程": "- **[Physical Principles]**: The Lorentz force on a current-carrying wire is $d\\vec F_L=I d\\vec l\\times\\vec B$.\n- **[Derivation Steps]**:\n  In the chosen sign convention, the motional EMF drives conventional current inside the tether from the inner end to the outer end; the plasma supplies the return path. Thus $d\\vec l=\\hat r\\,dr'$. With $\\vec B=B\\hat z$,\n  $$\\vec F_L=\\int I(\\hat r\\,dr')\\times (B(r')\\hat z)\\simeq -IB(r)L\\hat\\phi.$$\n  Since the orbital velocity is $\\vec v=v\\hat\\phi$, the Lorentz force is opposite to the velocity. If the magnetic-field direction and current polarity were reversed together, the passive-drag result remains fixed by Lenz's law.\n- **[Final Result]**:\n  $$\\vec F_L\\approx -I B(r)L\\hat v.$$",
       "最终答案": [
         "$\\vec{F}_L \\approx - I B(r) L \\hat{v}$"
       ],
@@ -306,7 +309,8 @@
       "显性条件": [
         "A steady current $I$ flows through the tether.",
         "The plasma return path has negligible resistance.",
-        "The tether is radial and the magnetic field is perpendicular to the orbital plane."
+        "The tether is radial and the magnetic field is perpendicular to the orbital plane.",
+        "The conventional current inside the tether is taken from the inner satellite toward the outer satellite; the return path is through the plasma."
       ],
       "隐性条件": [
         {
@@ -316,6 +320,10 @@
         {
           "条件原文": "$r\\gg L$.",
           "隐藏条件": "Use $B(r)$ as approximately constant over the tether length."
+        },
+        {
+          "条件原文": "The circuit is closed through the ambient plasma.",
+          "隐藏条件": "The current direction in the tether is set by the motional EMF, while the plasma carries the return current; this avoids interpreting the tether simply as a passive resistor from high to low electrostatic potential."
         }
       ]
     },
@@ -332,7 +340,7 @@
         "Lenz's Law"
       ]
     ],
-    "物理场景": "A closed electrodynamic-tether circuit carries current through the ambient plasma and experiences an anti-velocity magnetic drag force.",
+    "物理场景": "A closed electrodynamic-tether circuit carries conventional current radially outward through the tether and experiences an anti-velocity magnetic drag force.",
     "判分标准": [
       "Award 0.3 pt if the answer correctly lorentz Force primitive: $d\\vec{F}_L = I d\\vec{l} \\times \\vec{B}$. Otherwise, award 0 pt.",
       "Award 0.3 pt if the answer correctly current direction & cross product: Identifying current flows from inner to outer satellite (low to high potential), so $d\\vec{l} = \\hat{r} dr$. Otherwise, award 0 pt.",
@@ -452,9 +460,9 @@
     "题目信息": {
       "背景信息": "The system consists of two identical satellites of mass $m$ connected by a massless conductive tether of length $L$ and resistance $R$ in a circular equatorial orbit of radius $r$. The Earth's magnetic field is perpendicular to the orbital plane and has magnitude $B(r)=B_0(R_E/r)^3$. The circular-orbit speed is $v=\\sqrt{GM_E/r}$ and $r\\gg L$ so first-order expansions in $L/r$ are allowed.",
       "上下文": "The tether-plasma circuit carries a steady current $I$, so the magnetic field exerts a Lorentz force on the radial conductor and changes the circular orbit slowly.",
-      "问题原文": "Let $Q$ be the total charge transferred through the tether as the system descends from an initial radius $r_1$ to a final radius $r_2$. Prove that $Q = \\int I dt$ depends only on $r_1, r_2$, and the planetary constants ($M_E, R_E, B_0$), but is independent of the tether's resistance $R$ or the specific time-evolution of the current. Find the expression for $Q$. **[1.5 pt]**\n\n---",
-      "改造后问题": "Find the total transferred charge during descent from $r_1$ to $r_2$: $Q=\\underline{\\hspace{3cm}}$.",
-      "核心思路": "Use the decay equation to replace $dt$ by $dr$; the current $I$ cancels from $Q=\\int I dt$.",
+      "问题原文": "Let $Q$ be the total charge transferred through the tether as the system descends from an initial radius $r_1$ to a final radius $r_2$. Prove that $Q=\\int I dt$ is independent of the tether resistance $R$ and of the detailed time-evolution of the current, and find $Q$ in terms of $r_1$, $r_2$, $m$, $L$, and the planetary constants $M_E$, $R_E$, and $B_0$. **[1.5 pt]**",
+      "改造后问题": "Find the total transferred charge during descent from $r_1$ to $r_2$, including its dependence on $m$ and $L$: $Q=\\underline{\\hspace{3cm}}$.",
+      "核心思路": "Use the decay equation to replace $dt$ by $dr$; the current $I$ cancels from $Q=\\int I dt$, but the result still depends on the system inertia $m$ and tether length $L$.",
       "解答过程": "- **[Derivation Steps]**:\n  $Q = \\int I dt = \\int \\frac{I}{dr/dt} dr$. From B.2: $I dt = -\\frac{m \\sqrt{G M_E}}{B(r) L r^{3/2}} dr$.\n  $$Q = \\int_{r_2}^{r_1} \\frac{m \\sqrt{G M_E}}{(B_0 R_E^3 r^{-3}) L r^{3/2}} dr = \\frac{m \\sqrt{G M_E}}{B_0 R_E^3 L} \\int_{r_2}^{r_1} r^{3/2} dr$$\n- **[Final Result]**:\n  $$Q = \\frac{2m \\sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$$\n\n---",
       "最终答案": [
         "$Q = \\frac{2m \\sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$"
@@ -487,7 +495,8 @@
         "The system descends from $r_1$ to $r_2$ with $r_1>r_2$.",
         "$Q=\\int I dt$.",
         "The decay equation from B.2 is valid during the descent.",
-        "$B(r)=B_0(R_E/r)^3$."
+        "$B(r)=B_0(R_E/r)^3$.",
+        "The required final expression may depend on the satellite mass $m$ and tether length $L$ as well as planetary constants."
       ],
       "隐性条件": [
         {
@@ -497,6 +506,10 @@
         {
           "条件原文": "Prove independence of $R$ and current history.",
           "隐藏条件": "Substituting $dt=dr/(dr/dt)$ analytically cancels $I(t)$."
+        },
+        {
+          "条件原文": "Prove independence of resistance and current history.",
+          "隐藏条件": "This independence does not imply independence from all tether/system parameters; the final charge still depends on $m$ and $L$."
         }
       ]
     },
@@ -518,12 +531,12 @@
         "Charge Transfer"
       ]
     ],
-    "物理场景": "A current-carrying tether descends between two circular orbit radii while transferring charge through the plasma circuit.",
+    "物理场景": "A current-carrying tether descends between two circular orbit radii; the total transferred charge is independent of resistance and current history but not of satellite mass or tether length.",
     "判分标准": [
       "Award 0.5 pt if the answer correctly integral setup & variable substitution: $Q = \\int I dt = \\int I \\left(\\frac{dt}{dr}\\right) dr$. Otherwise, award 0 pt.",
       "Award 0.5 pt if the answer correctly canceling Current ($I$): Substituting $dt/dr$ from B.2: $I dt = -\\frac{m\\sqrt{GM_E}}{B(r) L r^{3/2}} dr$, explicitly showing $I$ cancels. Otherwise, award 0 pt.",
       "Award 0.3 pt if the answer correctly integration: Correctly integrating $\\int r^{3/2} dr = \\frac{2}{5}r^{5/2}$. Otherwise, award 0 pt.",
-      "Award 0.2 pt if the answer correctly final Result: $Q = \\frac{2 m \\sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$. Otherwise, award 0 pt."
+      "Award 0.2 pt if the answer correctly final Result: $Q = \\frac{2 m \\sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$, showing independence from $R$ and $I(t)$ but retaining the physical dependence on $m$ and $L$. Otherwise, award 0 pt."
     ],
     "错误解题步骤": [],
     "多解法标注": []
@@ -540,39 +553,47 @@
     "题目信息": {
       "背景信息": "Stefan-Boltzmann Law: The power radiated by a surface area $S$ with emissivity $\\epsilon$ at temperature $T$ is $P_{rad} = \\epsilon \\sigma S T^4$, where $\\sigma$ is the Stefan-Boltzmann constant.\nRichardson’s Law for thermionic emission: The saturation current $I$ emitted by a surface $S_{emit}$ at temperature $T$ is given by $I = S_{emit} A_R T^2 \\exp\\left(-\\frac{\\Phi}{k_B T}\\right)$, where $A_R$ is Richardson's constant and $\\Phi$ is the work function.",
       "上下文": "---\n\n### Part C: Electro-Thermal Limits and Asymptotic Evolution (3.0 points)\n\nIn a realistic scenario, the current $I$ is limited by the ability of the tether's ends to emit electrons into the plasma. At the cathode (the negative end), the current is governed by Richardson's thermionic emission law. Furthermore, the tether is subject to intense heating.\n\n**Useful Information for Part C:**\n*   Stefan-Boltzmann Law: The power radiated by a surface area $S$ with emissivity $\\epsilon$ at temperature $T$ is $P_{rad} = \\epsilon \\sigma S T^4$, where $\\sigma$ is the Stefan-Boltzmann constant.\n*   Richardson’s Law for thermionic emission: The saturation current $I$ emitted by a surface $S_{emit}$ at temperature $T$ is given by $I = S_{emit} A_R T^2 \\exp\\left(-\\frac{\\Phi}{k_B T}\\right)$, where $A_R$ is Richardson's constant and $\\Phi$ is the work function.",
-      "问题原文": "The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. The whole system is of the same temperature. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\\Phi$, so the energy carried away can be approximately written as $\\Phi$. Furthermore, assume the induced EMF $\\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Assume the total surface area of the system is $S$, and $S_{emit}=\\eta S$. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \\eta, \\epsilon, \\Phi$) and the local EMF $\\mathcal{E}$. **[1.2 pt]**",
+      "问题原文": "The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. The whole system is of the same temperature. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\\Phi$, so the energy carried away can be approximately written as $\\Phi$. Furthermore, assume the induced EMF $\\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Assume the total surface area of the system is $S$, and $S_{emit}=\\eta S$. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \\eta, \\epsilon, \\Phi$). Also state the EMF condition required for the saturation-current assumption to be self-consistent. **[1.2 pt]**",
       "改造后问题": "Write the coupled steady-state equations for $T_{eq}$ and $I_{sat}$, and state the EMF condition for the saturation-current regime.",
       "核心思路": "Balance Joule heating against radiative and thermionic-emission cooling, then impose Richardson's saturation current and the EMF availability condition.",
-      "解答过程": "- **[Equations]**:\n  1. Energy balance: $I_{sat}^2 R = \\epsilon \\sigma S T_{eq}^4 + \\frac{I_{sat} \\Phi}{e}$\n  2. Current balance: $I_{sat} = \\eta S A_R T_{eq}^2 \\exp\\left(-\\frac{\\Phi}{k_B T_{eq}}\\right)$",
+      "解答过程": "- **[Equations]**:\n  1. Energy balance: $I_{sat}^2 R = \\epsilon \\sigma S T_{eq}^4 + \\frac{I_{sat} \\Phi}{e}$\n  2. Current balance: $I_{sat} = \\eta S A_R T_{eq}^2 \\exp\\left(-\\frac{\\Phi}{k_B T_{eq}}\\right)$\n  3. EMF availability condition for the assumed saturation-current regime: $\\mathcal{E} \\ge I_{sat}R$ in the simplified circuit model.",
       "最终答案": [
         "$I_{sat}^2R=\\epsilon\\sigma S T_{eq}^4+I_{sat}\\Phi/e$",
-        "$I_{sat}=\\eta S A_RT_{eq}^2\\exp\\left(-\\frac{\\Phi}{k_BT_{eq}}\\right)$"
+        "$I_{sat}=\\eta S A_RT_{eq}^2\\exp\\left(-\\frac{\\Phi}{k_BT_{eq}}\\right)$",
+        "$\\mathcal{E}\\ge I_{sat}R$"
       ],
       "改造后答案": [
         "$I_{sat}^2R=\\epsilon\\sigma S T_{eq}^4+I_{sat}\\Phi/e$",
-        "$I_{sat}=\\eta S A_RT_{eq}^2\\exp\\left(-\\frac{\\Phi}{k_BT_{eq}}\\right)$"
+        "$I_{sat}=\\eta S A_RT_{eq}^2\\exp\\left(-\\frac{\\Phi}{k_BT_{eq}}\\right)$",
+        "$\\mathcal{E}\\ge I_{sat}R$"
       ],
       "答案类型": [
         "equation",
-        "equation"
+        "equation",
+        "inequality"
       ],
       "改造后答案类型": [
         "equation",
-        "equation"
+        "equation",
+        "inequality"
       ],
       "答案单位": [
+        "",
         "",
         ""
       ],
       "改造后答案单位": [
         "",
+        "",
         ""
       ],
       "关联图片路径": [
         "image/Figure_2.png",
+        "image/Figure_2.png",
         "image/Figure_2.png"
       ],
       "模态类型": [
+        "text+illustration figure",
         "text+illustration figure",
         "text+illustration figure"
       ],
@@ -584,7 +605,8 @@
         "Radiated power is $\\epsilon\\sigma S T_{eq}^4$.",
         "Each emitted electron removes energy $\\Phi$.",
         "The emission area is $S_{emit}=\\eta S$.",
-        "The current is the thermionic saturation current."
+        "The current is the thermionic saturation current.",
+        "The EMF availability condition for this regime is $\\mathcal{E}\\ge I_{sat}R$ in the simplified circuit model."
       ],
       "隐性条件": [
         {
@@ -620,7 +642,7 @@
       "Award 0.4 pt if the answer correctly joule Heating & Radiation: Identifying $P_{in} = I^2 R$ and thermal radiation $P_{rad} = \\epsilon \\sigma S T_{eq}^4$. Otherwise, award 0 pt.",
       "Award 0.2 pt if the answer correctly emission Cooling: Identifying power carried away by electrons is $P_{emit} = I \\frac{\\Phi}{e}$. Otherwise, award 0 pt.",
       "Award 0.4 pt if the answer correctly richardson's Law: Current balance $I_{sat} = \\eta S A_R T_{eq}^2 \\exp\\left(-\\frac{\\Phi}{k_B T_{eq}}\\right)$. Otherwise, award 0 pt.",
-      "Award 0.2 pt if the answer correctly system closure: Stating $I = I_{sat}$ and explicitly writing the self-consistent coupled equations. Otherwise, award 0 pt."
+      "Award 0.2 pt if the answer correctly system closure and EMF availability: Stating $I=I_{sat}$ and the self-consistency condition $\\mathcal{E}\\ge I_{sat}R$ (equivalently, enough EMF to drive the saturation current through $R$). Otherwise, award 0 pt."
     ],
     "错误解题步骤": [],
     "多解法标注": []
@@ -637,10 +659,10 @@
     "题目信息": {
       "背景信息": "Stefan-Boltzmann radiation and Richardson thermionic emission govern the tether's thermal and current limits; the local motional EMF is $\\mathcal{E}=BvL$.",
       "上下文": "The current is limited by thermionic emission at the cathode while Joule heating, radiation, and electron-emission cooling set the thermal state.",
-      "问题原文": "Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., $I^2 R \\gg I\\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \\gg \\Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\\exp(-\\Phi/k_B T) \\approx 1 - \\Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of the tether's material/geometric constants ($S, \\epsilon, R, L$), the satellites' mass $m$, and the local orbital parameters ($B, v, r$). **[1.8 pt]**",
+      "问题原文": "Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., $I^2 R \\gg I\\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \\gg \\Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\\exp(-\\Phi/k_B T) \\approx 1 - \\Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit. Also write the thermal consistency conditions that determine whether the tipping point can actually be reached, and state whether $S$ and $\\epsilon$ remain in the final decay-rate expression. **[1.8 pt]**",
       "改造后问题": "In the high-temperature tipping-point limit, find the positive orbital decay speed: $\\left|dr/dt\\right|=\\underline{\\hspace{3cm}}$.",
-      "核心思路": "At the EMF-limited tipping point use $I=\\mathcal{E}/R=BvL/R$ and substitute this into the B.2 decay-rate formula.",
-      "解答过程": "- **[Derivation Steps]**:\n  In the limit $I^2 R \\gg I \\Phi/e$ and $k_B T \\gg \\Phi$, the equations simplify to $I^2 R \\approx \\epsilon \\sigma S T^4$ and $I \\approx \\eta S A_R T^2$. At the tipping point, the current is determined by the maximum available EMF: $I = \\mathcal{E}/R$.\n  Substitute $I = \\frac{B L v}{R}$ into the decay rate $|dr/dt| = \\frac{I B L r}{m v}$ (from B.2):\n  $$|dr/dt| = \\frac{(B L v / R) B L r}{m v} = \\frac{B^2 L^2 r}{m R}$$\n- **[Final Result]**:\n  $$|dr/dt| = \\frac{B^2 L^2 r}{m R}$$",
+      "核心思路": "Use $I=\\mathcal{E}/R=BvL/R$ for the mechanical decay rate, and separately state the high-temperature thermal consistency conditions involving $S$, $\\epsilon$, $\\eta$, $A_R$, and $\\Phi$.",
+      "解答过程": "- **[Derivation Steps]**:\n  In the high-temperature limit, the thermal balance and Richardson law give the consistency relations\n  $$I^2R\\simeq \\epsilon\\sigma S T^4,$$\n  $$I_{sat}\\simeq \\eta S A_R T^2\\left(1-\\frac{\\Phi}{k_BT}\\right).$$\n  At the tipping point, the saturation current is just equal to the current allowed by the available motional EMF and the tether resistance:\n  $$I=I_{sat}=\\frac{\\mathcal{E}}{R}=\\frac{BvL}{R}.$$\n  Therefore the temperature required for thermal consistency is approximately\n  $$T\\simeq \\left(\\frac{B^2v^2L^2}{R\\epsilon\\sigma S}\\right)^{1/4},$$\n  together with\n  $$\\frac{BvL}{R}\\simeq \\eta S A_R T^2\\left(1-\\frac{\\Phi}{k_BT}\\right).$$\n  Substituting $I=BvL/R$ into the magnitude of the B.2 decay equation,\n  $$\\left|\\frac{dr}{dt}\\right|=\\frac{IBLr}{mv},$$\n  yields\n  $$\\left|\\frac{dr}{dt}\\right|=\\frac{(BvL/R)BLr}{mv}=\\frac{B^2L^2r}{mR}.$$\n  Thus $S$ and $\\epsilon$ enter the thermal consistency conditions but cancel from the final mechanical decay-rate expression.\n- **[Final Result]**:\n  $$\\left|\\frac{dr}{dt}\\right|=\\frac{B^2L^2r}{mR}.$$",
       "最终答案": [
         "$|dr/dt| = \\frac{B^2 L^2 r}{m R}$"
       ],
@@ -672,12 +694,13 @@
         "Joule heating dominates emission cooling: $I^2R\\gg I\\Phi/e$.",
         "The thermal energy is much larger than the work function: $k_BT\\gg\\Phi$.",
         "The tipping point satisfies $I_{sat}=\\mathcal{E}/R$.",
-        "The local motional EMF is $\\mathcal{E}=BvL$."
+        "The local motional EMF is $\\mathcal{E}=BvL$.",
+        "Thermal consistency also requires $T\\simeq(B^2v^2L^2/(R\\epsilon\\sigma S))^{1/4}$ and $BvL/R\\simeq\\eta S A_R T^2(1-\\Phi/(k_BT))$."
       ],
       "隐性条件": [
         {
-          "条件原文": "Expressed in terms of $S,\\epsilon,R,L,m,B,v,r$.",
-          "隐藏条件": "$S$ and $\\epsilon$ enter only the thermal consistency conditions in this tipping-point limit; they cancel from the final mechanical decay-rate expression."
+          "条件原文": "The problem lists $S$ and $\\epsilon$ among the relevant constants.",
+          "隐藏条件": "They are needed to test the thermal feasibility of the tipping point, but after imposing $I=\\mathcal{E}/R$ they cancel from the final mechanical decay-rate formula."
         },
         {
           "条件原文": "$|dr/dt|$ is requested.",
@@ -705,10 +728,11 @@
     ],
     "物理场景": "At very high temperature the thermionic-emission limit and the Ohmic EMF limit coincide, so the drag-driven decay rate is set by $B$, $v$, $L$, $R$, $m$, and $r$.",
     "判分标准": [
-      "Award 0.4 pt if the answer correctly tipping Point Identification: Recognizing that if limited by the available EMF, the current simply obeys Ohm's Law: $I = \\frac{\\mathcal{E}}{R}$. Otherwise, award 0 pt.",
-      "Award 0.4 pt if the answer correctly using local EMF: Substituting $\\mathcal{E} = v B L$ so $I = \\frac{v B L}{R}$. Otherwise, award 0 pt.",
-      "Award 0.5 pt if the answer correctly substitution into Decay Rate: Substituting this $I$ into the formula for $|dr/dt|$ derived in B.2: $\\|dr/dt\\| = \\frac{(vBL/R) B L}{m \\sqrt{GM_E} r^{-3/2}}$. Otherwise, award 0 pt.",
-      "Award 0.5 pt if the answer correctly final Simplification: Using $v = \\sqrt{\\frac{GM_E}{r}}$ to simplify to final form: $\\|dr/dt\\| = \\frac{B^2 L^2 r}{m R}$. Otherwise, award 0 pt."
+      "Award 0.4 pt if the answer correctly tipping Point Identification: Recognizing that at the EMF-limited tipping point $I=\\mathcal{E}/R$. Otherwise, award 0 pt.",
+      "Award 0.4 pt if the answer correctly uses local EMF: Substituting $\\mathcal{E}=vBL$ so $I=vBL/R$. Otherwise, award 0 pt.",
+      "Award 0.3 pt if the answer correctly states the thermal consistency conditions, e.g. $I^2R\\simeq\\epsilon\\sigma S T^4$ and $I_{sat}\\simeq\\eta S A_RT^2(1-\\Phi/(k_BT))$, and notes that $S,\\epsilon$ test feasibility. Otherwise, award 0 pt.",
+      "Award 0.3 pt if the answer correctly substitutes $I=BvL/R$ into $|dr/dt|=IBLr/(mv)$ from B.2. Otherwise, award 0 pt.",
+      "Award 0.4 pt if the answer correctly simplifies to $|dr/dt|=B^2L^2r/(mR)$ and states that $S$ and $\\epsilon$ do not remain in the final decay-rate expression. Otherwise, award 0 pt."
     ],
     "错误解题步骤": [],
     "多解法标注": [
