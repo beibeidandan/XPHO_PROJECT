@@ -1,6 +1,7 @@
 
 # Question
 # Orbital Decay and Electro-Thermal Equilibrium of an Electrodynamic Tether
+
 ### Introduction
 Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy and momentum with a planetary magnetic field. In this problem, we consider an EDT system consisting of two identical small satellites, each of mass $m$, connected by a thin, straight, conductive tether of length $L$ and total resistance $R$. The system orbits the Earth in the equatorial plane at an altitude within the ionosphere. Due to the gravity gradient, the tether is stabilized in a radial orientation, pointing toward the Earth’s center.
 
@@ -21,7 +22,7 @@ Consider the tether system initially moving in a stable circular orbit of radius
 
 **A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. Express your result in terms of $G$, $M_E$, $m$, $L$, and $r$. **[1.2 pt]**
 
-**A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Give the expression of this EMF, $\mathcal{E}$, as a function of $r$, $L$. **[1.0 pt]**
+**A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Calculate the magnitude of this EMF, $\mathcal{E}$, as a function of $r$, $L$, and the given planetary constants. **[1.0 pt]**
 
 **A.3.** Determine the polarity of the induced EMF, in other words, which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
 
@@ -129,26 +130,26 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 - **[Physical Principles]**: The Lorentz force is $d\vec{F}_L = I d\vec{l} \times \vec{B}$.
 - **[Derivation Steps]**:
   The induced EMF drives a current $I$ from the lower potential (inner) to the higher potential (outer) satellite through the tether. Thus, $d\vec{l}$ is in the $+\hat{r}$ direction.
-  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int I B(r') (-\hat{\phi}) dr'$$
+  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int_{r-L/2}^{r+L/2} I B(r') (-\hat{\phi}) dr' \approx -\frac{IB_0 R_E^3 L}{r^5}\hat{v}  $$
   Since the orbital velocity $\vec{v}$ is in the $+\hat{\phi}$ direction, $\vec{F}_L$ is exactly opposite to $\vec{v}$.
 - **[Final Result]**:
-  The total force is $\vec{F}_L \approx - I B(r) L \hat{v}$.
+  The total force is $\vec{F}_L \approx -\frac{IB_0 R_E^3 L}{r^5}\hat{v}$.
 
 **[B.2's Standard Solution]**
 - **[Equations]**:
-  Total mechanical energy $E = -\frac{G M_E m}{r}$. Power dissipated $P = \vec{F}_L \cdot \vec{v} = - I B L v$.
+  Total mechanical energy $E = -\frac{G M_E m}{r}$. Power dissipated $P = \vec{F}_L \cdot \vec{v} = - \frac{IB_0 R_E^3 L}{r^5} v$.
 - **[Derivation Steps]**:
-  $$\frac{dE}{dt} = \frac{G M_E m}{r^2} \frac{dr}{dt} = - I B L \sqrt{\frac{G M_E}{r}}$$
+  $$\frac{dE}{dt} = \frac{G M_E m}{r^2} \frac{dr}{dt} = - \frac{IB_0 R_E^3 L}{r^5} \sqrt{\frac{G M_E}{r}}$$
   Solving for $dr/dt$:
 - **[Final Result]**:
-  $$\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{3/2}}$$
+  $$\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{7/2}}$$
 
 **[B.3's Standard Solution]**
 - **[Derivation Steps]**:
-  $Q = \int I dt = \int \frac{I}{dr/dt} dr$. From B.2: $I dt = -\frac{m \sqrt{G M_E}}{B(r) L r^{3/2}} dr$.
-  $$Q = \int_{r_2}^{r_1} \frac{m \sqrt{G M_E}}{(B_0 R_E^3 r^{-3}) L r^{3/2}} dr = \frac{m \sqrt{G M_E}}{B_0 R_E^3 L} \int_{r_2}^{r_1} r^{3/2} dr$$
+  $Q = \int I dt = \int \frac{I}{dr/dt} dr$. From B.2: $I dt = -\frac{m \sqrt{G M_E} r^{7/2}}{B_0R_E^3 L } dr$.
+  $$Q = \int_{r_1}^{r_2} -\frac{m \sqrt{G M_E} r^{7/2}}{B_0R_E^3 L }  dr = -\frac{m \sqrt{G M_E}}{B_0 R_E^3 L} \int_{r_1}^{r_2} r^{7/2} dr$$
 - **[Final Result]**:
-  $$Q = \frac{2m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$$
+  $$Q = \frac{2m \sqrt{G M_E}}{9 B_0 R_E^3 L} (r_1^{9/2} - r_2^{9/2})$$
 
 ---
 
@@ -251,11 +252,11 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 | **B.2** | **Total Energy / Angular Momentum:** $E_{tot} = -\frac{GM_E (2m)}{2r} = -\frac{GM_E m}{r}$ <br>*(Alt: $L_{ang} = 2mvr$)* | 0.4 | **Trap:** Forgetting there are *two* satellites (mass $2m$). Deduct 0.2 if total energy is written as $-GM_E m / (2r)$. |
 | | **Power / Torque relation:** $\frac{dE}{dt} = \vec{F}_L \cdot \vec{v} = -I B L v$<br>*(Alt: $\frac{dL_{ang}}{dt} = \tau = -I B L r$)* | 0.4 | Must include the negative sign indicating dissipation. |
 | | **Derivatives with respect to $r$:** Chain rule $\frac{dE}{dt} = \frac{GM_E m}{r^2}\frac{dr}{dt}$ | 0.4 | *(Alt: $\frac{dL_{ang}}{dt} = 2m\sqrt{GM_E} \cdot \frac{1}{2\sqrt{r}}\frac{dr}{dt}$)* |
-| | **Final Result:** $\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{3/2}}$ | 0.3 | Must substitute B(r) and correctly isolate $dr/dt$. <br>**1.5 pts Total for B.2** |
+| | **Final Result:** $\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{7/2}}$ | 0.3 | Must substitute B(r) and correctly isolate $dr/dt$. <br>**1.5 pts Total for B.2** |
 | **B.3** | **Integral setup & variable substitution:** $Q = \int I dt = \int I \left(\frac{dt}{dr}\right) dr$ | 0.5 | |
-| | **Canceling Current ($I$):** Substituting $dt/dr$ from B.2: $I dt = -\frac{m\sqrt{GM_E}}{B(r) L r^{3/2}} dr$, explicitly showing $I$ cancels. | 0.5 | **ECF:** If a model error in B.2 prevents $I$ from canceling, award 0 marks from this point onward (model collapse). |
-| | **Integration:** Correctly integrating $\int r^{3/2} dr = \frac{2}{5}r^{5/2}$ | 0.3 | Limits must correspond correctly ($r_1 \to r_2$ with $r_1 > r_2$ or absorbing the negative sign). |
-| | **Final Result:** $Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$ | 0.2 | Expression devoid of $I(t)$ or $R$ automatically satisfies the "prove" requirement. <br>**1.5 pts Total for B.3** |
+| | **Canceling Current ($I$):** Substituting $dt/dr$ from B.2: $I dt = -\frac{m\sqrt{GM_E}r^{7/2}}{B_0 R_E^3 L } dr$, explicitly showing $I$ cancels. | 0.5 | **ECF:** If a model error in B.2 prevents $I$ from canceling, award 0 marks from this point onward (model collapse). |
+| | **Integration:** Correctly integrating $\int r^{7/2} dr = \frac{2}{9}r^{9/2}$ | 0.3 | Limits must correspond correctly ($r_1 \to r_2$ with $r_1 > r_2$ or absorbing the negative sign). |
+| | **Final Result:** $Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{9/2} - r_2^{9/2})$ | 0.2 | Expression devoid of $I(t)$ or $R$ automatically satisfies the "prove" requirement. <br>**1.5 pts Total for B.3** |
 | **Subtotal** | **Part B Total** | **4.0** | |
 
 ---
@@ -295,6 +296,8 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
     -   **B.2 Angular Momentum Method:** Instead of Energy ($E$), students may use Angular Momentum ($L_{ang} = 2mvr = 2m\sqrt{GM_E r}$) and set the rate of change equal to the external magnetic torque ($\tau = -I B L r$). This is an elegant alternative. Award 0.4 for $L_{ang}$, 0.4 for torque, 0.4 for taking the derivative, and 0.3 for the final result.
 
 ![](image/ipho_2025_1_1.png)
+
+![](image/model-teacher_2026_1_1.png)
 
 # DiagramCode
 ### [1] Visual Strategy Plan

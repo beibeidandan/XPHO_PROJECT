@@ -1,6 +1,7 @@
 
 # Question
 # Orbital Decay and Electro-Thermal Equilibrium of an Electrodynamic Tether
+
 ### Introduction
 Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy and momentum with a planetary magnetic field. In this problem, we consider an EDT system consisting of two identical small satellites, each of mass $m$, connected by a thin, straight, conductive tether of length $L$ and total resistance $R$. The system orbits the Earth in the equatorial plane at an altitude within the ionosphere. Due to the gravity gradient, the tether is stabilized in a radial orientation, pointing toward the Earth’s center.
 
@@ -17,11 +18,11 @@ Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy 
 
 ### Part A: Orbital Dynamics and Motional EMF (3.0 points)
 
-Consider the tether system initially moving in a stable circular orbit of radius $r$ ($r \gg L$) in the Earth’s equatorial plane. The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. The center of mass of the system moves at the Keplerian velocity $v$.
+Consider the tether system initially moving in a stable circular orbit of radius $r$ ($r \gg L$) in the Earth’s equatorial plane(r is the distance from the center of the system). The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. The center of mass of the system moves at the Keplerian velocity $v$.
 
-**A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. Express your result in terms of $G$, $M_E$, $m$, $L$, and $r$. **[1.2 pt]**
+**A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. Express your result in terms of $G$, $M_E$, $m$, $L$, and $r$.$M_E$ is the mass of the earth. **[1.2 pt]**
 
-**A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Give the expression of this EMF, $\mathcal{E}$, as a function of $r$, $L$. **[1.0 pt]**
+**A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Calculate the magnitude of this EMF, $\mathcal{E}$, as a function of $r$, $L$, and the given planetary constants. **[1.0 pt]**
 
 **A.3.** Determine the polarity of the induced EMF, in other words, which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
 
@@ -129,10 +130,10 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 - **[Physical Principles]**: The Lorentz force is $d\vec{F}_L = I d\vec{l} \times \vec{B}$.
 - **[Derivation Steps]**:
   The induced EMF drives a current $I$ from the lower potential (inner) to the higher potential (outer) satellite through the tether. Thus, $d\vec{l}$ is in the $+\hat{r}$ direction.
-  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int I B(r') (-\hat{\phi}) dr'$$
+  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int I B(r') (-\hat{\phi}) dr'\approx \frac{IB_0R_E^3L}{r^3}$$
   Since the orbital velocity $\vec{v}$ is in the $+\hat{\phi}$ direction, $\vec{F}_L$ is exactly opposite to $\vec{v}$.
 - **[Final Result]**:
-  The total force is $\vec{F}_L \approx - I B(r) L \hat{v}$.
+  The total force is $\vec{F}_L \approx \frac{IB_0R_E^3L}{r^3}$.
 
 **[B.2's Standard Solution]**
 - **[Equations]**:
@@ -246,7 +247,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 | :--- | :--- | :--- | :--- |
 | **B.1** | **Lorentz Force primitive:** $d\vec{F}_L = I d\vec{l} \times \vec{B}$ | 0.3 | Accept integral or macroscopic form $\vec{F}_L = I \vec{L} \times \vec{B}$. |
 | | **Current direction & cross product:** Identifying current flows from inner to outer satellite (low to high potential), so $d\vec{l} = \hat{r} dr$. | 0.3 | |
-| | **Magnitude and Direction:** $F_L = I B(r) L$ and explicitly stating or proving it points opposite to $\vec{v}$ (i.e., $-\hat{\phi}$ direction). | 0.4 | 0.2 for magnitude, 0.2 for direction. |
+| | **Magnitude and Direction:** $F_L \approx \frac{IB_0R_E^3L}{r^3}$ and explicitly stating or proving it points opposite to $\vec{v}$ (i.e., $-\hat{\phi}$ direction). | 0.4 | 0.2 for magnitude, 0.2 for direction. |
 | | | | **1.0 pt Total for B.1** |
 | **B.2** | **Total Energy / Angular Momentum:** $E_{tot} = -\frac{GM_E (2m)}{2r} = -\frac{GM_E m}{r}$ <br>*(Alt: $L_{ang} = 2mvr$)* | 0.4 | **Trap:** Forgetting there are *two* satellites (mass $2m$). Deduct 0.2 if total energy is written as $-GM_E m / (2r)$. |
 | | **Power / Torque relation:** $\frac{dE}{dt} = \vec{F}_L \cdot \vec{v} = -I B L v$<br>*(Alt: $\frac{dL_{ang}}{dt} = \tau = -I B L r$)* | 0.4 | Must include the negative sign indicating dissipation. |

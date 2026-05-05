@@ -1,10 +1,13 @@
-
 # Question
+
 # Orbital Decay and Electro-Thermal Equilibrium of an Electrodynamic Tether
+
 ### Introduction
-Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy and momentum with a planetary magnetic field. In this problem, we consider an EDT system consisting of two identical small satellites, each of mass $m$, connected by a thin, straight, conductive tether of length $L$ and total resistance $R$. The system orbits the Earth in the equatorial plane at an altitude within the ionosphere. Due to the gravity gradient, the tether is stabilized in a radial orientation, pointing toward the Earth’s center.
+
+Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy and momentum with a planetary magnetic field. In this problem, we consider an EDT system consisting of two identical small satellites, each of mass $m$, connected by a thin, straight, conductive tether of length $L$ and total resistance $R$. The system orbits the Earth in the equatorial plane at an altitude within the ionosphere in the prograde direction (counterclockwise as viewed from the north pole).  Due to the gravity gradient, the tether is stabilized in a radial orientation, pointing toward the Earth’s center.
 
 **Useful Information:**
+
 *   The Earth’s magnetic field can be modeled as a magnetic dipole. In the equatorial plane, the magnetic field is strictly perpendicular to the orbital plane.
 *   The magnitude of the magnetic field at a distance $r$ from the Earth's center is given by:
     $$B(r) = B_0 \left( \frac{R_E}{r} \right)^3$$
@@ -19,11 +22,11 @@ Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy 
 
 Consider the tether system initially moving in a stable circular orbit of radius $r$ ($r \gg L$) in the Earth’s equatorial plane. The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. The center of mass of the system moves at the Keplerian velocity $v$.
 
-**A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. Express your result in terms of $G$, $M_E$, $m$, $L$, and $r$. **[1.2 pt]**
+**A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. **[1.2 pt]**
 
-**A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Give the expression of this EMF, $\mathcal{E}$, as a function of $r$, $L$. **[1.0 pt]**
+**A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Calculate the magnitude of this EMF, $\mathcal{E}$, as a function of $r$, $L$, and the given planetary constants. **[1.0 pt]**
 
-**A.3.** Determine the polarity of the induced EMF, in other words, which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
+**A.3.** Determine the polarity of the induced EMF. Which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
 
 ---
 
@@ -33,7 +36,7 @@ The tether is immersed in the ionospheric plasma, which is a dilute ionized gas.
 
 **B.1.** Derive the expression for the total Lorentz force $\vec{F}_L$ acting on the tether. Show that this force acts in the direction exactly opposite to the orbital velocity vector $\vec{v}$. **[1.0 pt]**
 
-**B.2.** Due to the work done by the Lorentz force, the system's mechanical energy dissipates, causing the orbit to decay. Assuming the orbit remains quasi-circular at all times, derive the differential equation for the rate of change of the orbital radius, $dr/dt$, in terms of $I, B_0 L, m, M_E, R_E$, and $r$. **[1.5 pt]**
+**B.2.** Due to the work done by the Lorentz force, the system's mechanical energy dissipates, causing the orbit to decay. Assuming the orbit remains quasi-circular at all times, derive the differential equation for the rate of change of the orbital radius, $dr/dt$, in terms of $I, B(r), L, m, M_E$, and $r$. **[1.5 pt]**
 
 **B.3.** Let $Q$ be the total charge transferred through the tether as the system descends from an initial radius $r_1$ to a final radius $r_2$. Prove that $Q = \int I dt$ depends only on $r_1, r_2$, and the planetary constants ($M_E, R_E, B_0$), but is independent of the tether's resistance $R$ or the specific time-evolution of the current. Find the expression for $Q$. **[1.5 pt]**
 
@@ -44,15 +47,18 @@ The tether is immersed in the ionospheric plasma, which is a dilute ionized gas.
 In a realistic scenario, the current $I$ is limited by the ability of the tether's ends to emit electrons into the plasma. At the cathode (the negative end), the current is governed by Richardson's thermionic emission law. Furthermore, the tether is subject to intense heating.
 
 **Useful Information for Part C:**
+
 *   Stefan-Boltzmann Law: The power radiated by a surface area $S$ with emissivity $\epsilon$ at temperature $T$ is $P_{rad} = \epsilon \sigma S T^4$, where $\sigma$ is the Stefan-Boltzmann constant.
 *   Richardson’s Law for thermionic emission: The saturation current $I$ emitted by a surface $S_{emit}$ at temperature $T$ is given by $I = S_{emit} A_R T^2 \exp\left(-\frac{\Phi}{k_B T}\right)$, where $A_R$ is Richardson's constant and $\Phi$ is the work function.
 
-**C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. The whole system is of the same temperature. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$, so the energy carried away can be approximately written as $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Assume the total surface area of the system is $S$, and $S_{emit}=\eta S$. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$) and the local EMF $\mathcal{E}$. **[1.2 pt]**
+**C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$) and the local EMF $\mathcal{E}$. **[1.2 pt]**
 
 **C.2.** Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., $I^2 R \gg I\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \gg \Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of the tether's material/geometric constants ($S, \epsilon, R, L$), the satellites' mass $m$, and the local orbital parameters ($B, v, r$). **[1.8 pt]**
 
 # QuestionReview
+
 ### [1] Final Assessment Conclusion
+
 **PASS (Adopt Directly)**
 The problem is physically rigorous, mathematically elegant, and perfectly mirrors the IPhO "progressive narrative" style. It successfully couples three distinct areas of physics (Orbital Mechanics, Electrodynamics, and Thermodynamics) into a self-consistent feedback loop. The "Charge Transfer Theorem" in Part B is a classic IPhO-style discovery, and the transition to the thermionic emission limit in Part C provides the necessary "High-Distinction" filter.
 
@@ -79,6 +85,7 @@ The problem is physically rigorous, mathematically elegant, and perfectly mirror
     *   **Part C.2:** The approximation $\exp(-x) \approx 1-x$ for the thermionic limit is a sophisticated way to turn a transcendental system into a solvable asymptotic limit, testing the student's ability to handle physical scales.
 
 ### [3] Major Risk Warning
+
 **A.1 Tension Coefficient Ambiguity:**
 There is a slight risk regarding the tension $T_N$. In the rotating frame, for two point masses $m$ separated by $L$, the tension is $T = \frac{3GM_E mL}{2r^3}$. However, some textbooks (and the original Framework) occasionally cite $3/4$ if they consider a continuous rod of total mass $2m$. The Proposition Agent must ensure the Marking Scheme explicitly uses the point-mass derivation (coefficient $3/2$) unless the tether itself is treated as having mass. Given the prompt specifies $m_{tether}=0$, $3/2$ is the correct physical result.
 
@@ -86,14 +93,18 @@ There is a slight risk regarding the tension $T_N$. In the rotating frame, for t
 The phrase "tipping point where $I_{sat}$ is exactly limited by the available EMF" is a sophisticated constraint. It implies the condition where the electrical driving force exactly matches the maximum possible emission. Students might find the algebraic substitution between $I^2R$ and $T^4$ challenging; the Marking Scheme must clearly show how $I$ cancels out or settles into the material-constant-driven expression.
 
 ### [4] Actionable Suggestions for Rework
+
 **None.** The problem is ready for the competition. 
 
 *(Optional optimization for the Agent: In the solution manual, ensure the derivation for **B.3** clearly shows the substitution $v = \sqrt{GM_E/r}$ and $B \propto r^{-3}$, as the $r^{1.5}$ integration is the core of the proof.)*
 
 # Answer
+
 ### Part A
+
 **[A.1's Standard Solution]**
-- **[Physical Principles]**: In a rotating frame centered at the CM (radius $r$) with angular velocity $\omega = \sqrt{G M_E / r^3}$, the net radial force on a mass $m$ at distance $x$ from the CM is the sum of the gravitational force, the centrifugal force and the inertial force caused by the acceleration of the CM.
+
+- **[Physical Principles]**: In a rotating frame centered at the CM (radius $r$) with angular velocity $\omega = \sqrt{G M_E / r^3}$, the net radial force on a mass $m$ at distance $x$ from the CM is the sum of the gravitational force and the centrifugal force.
 - **[Equations]**:
   The effective radial force is:
   $$F_{eff} = m \omega^2 (r+x) - \frac{G M_E m}{(r+x)^2} \quad (1)$$
@@ -105,6 +116,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   $$T_N = \frac{3 G M_E m L}{2 r^3}$$
 
 **[A.2's Standard Solution]**
+
 - **[Physical Principles]**: The motional EMF is generated as the tether moves through the magnetic field $B(r)$.
 - **[Equations]**:
   $$\mathcal{E} = \int_{r-L/2}^{r+L/2} v(r') B(r') dr' \quad (2)$$
@@ -116,6 +128,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   $$\mathcal{E} = B_0 R_E^3 L \sqrt{\frac{G M_E}{r^7}}$$
 
 **[A.3's Standard Solution]**
+
 - **[Physical Principles]**: The induced electric field is $\vec{E}_{ind} = \vec{v} \times \vec{B}$. In the Earth's equatorial plane, $\vec{v}$ is along the orbital tangent and $\vec{B}$ is directed toward the geographic North.
 - **[Derivation Steps]**:
   Using the right-hand rule, $\vec{v} \times \vec{B}$ points radially outward (away from Earth's center). Positive charges will therefore accumulate at the end further from Earth.
@@ -125,16 +138,19 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 ---
 
 ### Part B
+
 **[B.1's Standard Solution]**
+
 - **[Physical Principles]**: The Lorentz force is $d\vec{F}_L = I d\vec{l} \times \vec{B}$.
 - **[Derivation Steps]**:
   The induced EMF drives a current $I$ from the lower potential (inner) to the higher potential (outer) satellite through the tether. Thus, $d\vec{l}$ is in the $+\hat{r}$ direction.
-  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int I B(r') (-\hat{\phi}) dr'$$
+  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int_{r-L/2}^{r+L/2} I B(r') (-\hat{\phi}) dr' = - I B_0 {R_E}^3 \hat{\phi}\int_{r-L/2}^{r+L/2} r'^{-3} dr' = - I B_0 {R_E}^3 \hat{\phi} [\frac{1}{r'^2}]_{r-L/2}^{r+L/2} \approx -\frac{I L B_0 R_E^3}{r^3}\hat{\phi} $$
   Since the orbital velocity $\vec{v}$ is in the $+\hat{\phi}$ direction, $\vec{F}_L$ is exactly opposite to $\vec{v}$.
 - **[Final Result]**:
-  The total force is $\vec{F}_L \approx - I B(r) L \hat{v}$.
+  The total force is $\vec{F}_L \approx -\frac{I L B_0 R_E^3}{r^3}\hat{\phi}$.
 
 **[B.2's Standard Solution]**
+
 - **[Equations]**:
   Total mechanical energy $E = -\frac{G M_E m}{r}$. Power dissipated $P = \vec{F}_L \cdot \vec{v} = - I B L v$.
 - **[Derivation Steps]**:
@@ -144,21 +160,25 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   $$\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{3/2}}$$
 
 **[B.3's Standard Solution]**
+
 - **[Derivation Steps]**:
   $Q = \int I dt = \int \frac{I}{dr/dt} dr$. From B.2: $I dt = -\frac{m \sqrt{G M_E}}{B(r) L r^{3/2}} dr$.
   $$Q = \int_{r_2}^{r_1} \frac{m \sqrt{G M_E}}{(B_0 R_E^3 r^{-3}) L r^{3/2}} dr = \frac{m \sqrt{G M_E}}{B_0 R_E^3 L} \int_{r_2}^{r_1} r^{3/2} dr$$
 - **[Final Result]**:
-  $$Q = \frac{2m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$$
+  $$Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$$
 
 ---
 
 ### Part C
+
 **[C.1's Standard Solution]**
+
 - **[Equations]**:
-  1. Energy balance: $I_{sat}^2 R = \epsilon \sigma S T_{eq}^4 + \frac{I_{sat} \Phi}{e}$
+  1. Energy balance: $2 I^2 R = \epsilon \sigma S T_{eq}^4 + I \mathcal{E}$
   2. Current balance: $I_{sat} = \eta S A_R T_{eq}^2 \exp\left(-\frac{\Phi}{k_B T_{eq}}\right)$
 
 **[C.2's Standard Solution]**
+
 - **[Derivation Steps]**:
   In the limit $I^2 R \gg I \Phi/e$ and $k_B T \gg \Phi$, the equations simplify to $I^2 R \approx \epsilon \sigma S T^4$ and $I \approx \eta S A_R T^2$. At the tipping point, the current is determined by the maximum available EMF: $I = \mathcal{E}/R$.
   Substitute $I = \frac{B L v}{R}$ into the decay rate $|dr/dt| = \frac{I B L r}{m v}$ (from B.2):
@@ -167,7 +187,9 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   $$|dr/dt| = \frac{B^2 L^2 r}{m R}$$
 
 # AnswerValidation
+
 ### [Part 1: Derivation Rigor Audit]
+
 - **Step Check**:
   - **A.1**: The solver accurately applies the gravity gradient and centrifugal force equations in the rotating frame of the center of mass. The first-order Taylor expansion over $x \ll r$ correctly yields the net outward force, seamlessly leading to the midpoint tension. 
   - **A.2**: The solver sets up the motional EMF integral correctly, incorporating the varying magnetic field $B(r')$ and Keplerian velocity $v(r')$. The first-order expansion of the integration limits correctly simplifies to the exact given expression.
@@ -184,6 +206,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   - **[Mathematical Error]**: None.
 
 ### [Part 2: Correctness & Closure Verification]
+
 - **Final Result Verification**:
   - **A.1**: [Verdict]: **Correct**. 
   - **A.2**: [Verdict]: **Correct**.
@@ -197,6 +220,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   All final variables strictly map to the given knowns and planetary constants. In Part **C.2**, the solver correctly excluded the parameters $S$ and $\epsilon$ from the final expression. This correctly reflects the physics of the "tipping point," where mechanical decay is entirely driven by the Ohmic circuit resistance limit rather than the localized thermal emission characteristics. No undefined intermediate variables were left behind.
 
 ### [Part 3: Physical Pressure Test]
+
 - **Dimensional Audit**:
   - **Part B.2 Result**: $\frac{dr}{dt} \propto \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{3/2}}$
     - Numerator Force Dimension: $[I B L] = \text{M} \cdot \text{L} \cdot \text{T}^{-2}$
@@ -214,65 +238,68 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   - **Angular Momentum Consistency**: In Part B.2, energy conservation is used. We can cross-verify this with angular momentum $L_{ang} = 2m \sqrt{G M_E r}$. The magnetic torque is $\tau = \vec{r} \times \vec{F}_L = - I B L r$. Taking the time derivative of angular momentum yields $dL_{ang}/dt = m \sqrt{G M_E / r} (dr/dt)$. Substituting the solver's $dr/dt$ exactly yields $dL_{ang}/dt = - I B L r$, matching the torque. The solution represents profound physical consistency across different mechanical frameworks.
 
 ### [Part 4: Final Verdict]
+
 - **Rigor Score**: 10 / 10
 - **Conclusion Usability**: Adopt Directly
 - **Expert Opinion**: The provided Standard Solution is phenomenally robust and physically immaculate. The Solver Agent showcased high-caliber problem-solving intuition, specifically in Part C.2. By correctly assessing that the "tipping point" structurally collapses the complex thermionic constraints down to the fundamental Ohmic bottleneck ($I = \mathcal{E}/R$), the solver bypassed the "distractor" elements ($S, \epsilon$, and the Richardson approximation limit) to provide the exact, elegant answer. Both derivations and conclusions are unconditionally endorsed for formal use.
 
 # GradingRubric
+
 ### [IPHO Official Marking Scheme]
+
 **Total Score: 10.0 pts**
 
 #### Part A: Orbital Dynamics and Motional EMF (Total: 3.0 pts)
 
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **A.1** | **Effective force equation:** Setting up the net radial force in the rotating frame (gravity + centrifugal): $F_{eff} = m\omega^2(r+x) - \frac{GM_E m}{(r+x)^2}$ | 0.3 | Accept equivalent formulations using generalized coordinates or tidal force directly. |
-| | **Taylor expansion:** Expanding to first-order for $x \ll r$: <br>$F_{eff} \approx \frac{GM_E m}{r^2}\left(1 + \frac{x}{r} - 1 + \frac{2x}{r}\right) = \frac{3GM_E m x}{r^3}$ | 0.4 | Award 0.2 for correctly applying $\omega^2 = GM_E/r^3$; 0.2 for the algebraic expansion. |
-| | **Force balance & Tension uniformity:** Recognizing that for a massless tether, tension is uniform ($T_N = T_{end}$) and balances the force on the satellite at $x=L/2$. | 0.3 | Explicitly substituting $x = L/2$ into the force equation. |
-| | **Final Result:** $T_N = \frac{3 G M_E m L}{2 r^3}$ | 0.2 | Must be positive. Dimensions must be Force. |
-| **A.2** | **Motional EMF primitive equation:** $\mathcal{E} = \int_{r-L/2}^{r+L/2} v(r') B(r') dr'$ or recognizing $\mathcal{E} \approx vBL$ at CM. | 0.3 | Evaluating at the CM directly without integration is fully accepted due to $L \ll r$. |
-| | **Substitution of fields:** Substituting $v = \omega r$ and $B = B_0(R_E/r)^3$. | 0.3 | |
-| | **Keplerian substitution:** Using $\omega = \sqrt{GM_E/r^3}$ to eliminate $\omega$ and $v$. | 0.2 | |
-| | **Final Result:** $\mathcal{E} = B_0 R_E^3 L \sqrt{\frac{G M_E}{r^7}}$ | 0.2 | **ECF:** Deduct 0.2 if the student uses the wrong power of $r$ but carried the steps correctly. **1.0 pt Total for A.2** |
-| **A.3** | **Directional logic:** Applying right-hand rule for $\vec{F} = q(\vec{v} \times \vec{B})$ or $\vec{E}_{ind} = \vec{v} \times \vec{B}$. | 0.4 | Must indicate that the force on positive charges points radially outward (away from Earth). |
-| | **Conclusion:** The satellite **farther from Earth** accumulates positive charges. | 0.4 | No justification/work = 0 marks for this part. **0.8 pt Total for A.3** |
-| **Subtotal** | **Part A Total** | **3.0** | |
+| Sub-part     | Item / Key Equation                                          | Marks   | Notes for Graders                                            |
+| :----------- | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+| **A.1**      | **Effective force equation:** Setting up the net radial force in the rotating frame (gravity + centrifugal): $F_{eff} = m\omega^2(r+x) - \frac{GM_E m}{(r+x)^2}$ | 0.3     | Accept equivalent formulations using generalized coordinates or tidal force directly. |
+|              | **Taylor expansion:** Expanding to first-order for $x \ll r$: <br>$F_{eff} \approx \frac{GM_E m}{r^2}\left(1 + \frac{x}{r} - 1 + \frac{2x}{r}\right) = \frac{3GM_E m x}{r^3}$ | 0.4     | Award 0.2 for correctly applying $\omega^2 = GM_E/r^3$; 0.2 for the algebraic expansion. |
+|              | **Force balance & Tension uniformity:** Recognizing that for a massless tether, tension is uniform ($T_N = T_{end}$) and balances the force on the satellite at $x=L/2$. | 0.3     | Explicitly substituting $x = L/2$ into the force equation.   |
+|              | **Final Result:** $T_N = \frac{3 G M_E m L}{2 r^3}$          | 0.2     | Must be positive. Dimensions must be Force.                  |
+| **A.2**      | **Motional EMF primitive equation:** $\mathcal{E} = \int_{r-L/2}^{r+L/2} v(r') B(r') dr'$ or recognizing $\mathcal{E} \approx vBL$ at CM. | 0.3     | Evaluating at the CM directly without integration is fully accepted due to $L \ll r$. |
+|              | **Substitution of fields:** Substituting $v = \omega r$ and $B = B_0(R_E/r)^3$. | 0.3     |                                                              |
+|              | **Keplerian substitution:** Using $\omega = \sqrt{GM_E/r^3}$ to eliminate $\omega$ and $v$. | 0.2     |                                                              |
+|              | **Final Result:** $\mathcal{E} = B_0 R_E^3 L \sqrt{\frac{G M_E}{r^7}}$ | 0.2     | **ECF:** Deduct 0.2 if the student uses the wrong power of $r$ but carried the steps correctly. **1.0 pt Total for A.2** |
+| **A.3**      | **Directional logic:** Applying right-hand rule for $\vec{F} = q(\vec{v} \times \vec{B})$ or $\vec{E}_{ind} = \vec{v} \times \vec{B}$. | 0.4     | Must indicate that the force on positive charges points radially outward (away from Earth). |
+|              | **Conclusion:** The satellite **farther from Earth** accumulates positive charges. | 0.4     | No justification/work = 0 marks for this part. **0.8 pt Total for A.3** |
+| **Subtotal** | **Part A Total**                                             | **3.0** |                                                              |
 
 ---
 
 #### Part B: Electrodynamic Drag and Orbital Evolution (Total: 4.0 pts)
 
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **B.1** | **Lorentz Force primitive:** $d\vec{F}_L = I d\vec{l} \times \vec{B}$ | 0.3 | Accept integral or macroscopic form $\vec{F}_L = I \vec{L} \times \vec{B}$. |
-| | **Current direction & cross product:** Identifying current flows from inner to outer satellite (low to high potential), so $d\vec{l} = \hat{r} dr$. | 0.3 | |
-| | **Magnitude and Direction:** $F_L = I B(r) L$ and explicitly stating or proving it points opposite to $\vec{v}$ (i.e., $-\hat{\phi}$ direction). | 0.4 | 0.2 for magnitude, 0.2 for direction. |
-| | | | **1.0 pt Total for B.1** |
-| **B.2** | **Total Energy / Angular Momentum:** $E_{tot} = -\frac{GM_E (2m)}{2r} = -\frac{GM_E m}{r}$ <br>*(Alt: $L_{ang} = 2mvr$)* | 0.4 | **Trap:** Forgetting there are *two* satellites (mass $2m$). Deduct 0.2 if total energy is written as $-GM_E m / (2r)$. |
-| | **Power / Torque relation:** $\frac{dE}{dt} = \vec{F}_L \cdot \vec{v} = -I B L v$<br>*(Alt: $\frac{dL_{ang}}{dt} = \tau = -I B L r$)* | 0.4 | Must include the negative sign indicating dissipation. |
-| | **Derivatives with respect to $r$:** Chain rule $\frac{dE}{dt} = \frac{GM_E m}{r^2}\frac{dr}{dt}$ | 0.4 | *(Alt: $\frac{dL_{ang}}{dt} = 2m\sqrt{GM_E} \cdot \frac{1}{2\sqrt{r}}\frac{dr}{dt}$)* |
-| | **Final Result:** $\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{3/2}}$ | 0.3 | Must substitute B(r) and correctly isolate $dr/dt$. <br>**1.5 pts Total for B.2** |
-| **B.3** | **Integral setup & variable substitution:** $Q = \int I dt = \int I \left(\frac{dt}{dr}\right) dr$ | 0.5 | |
-| | **Canceling Current ($I$):** Substituting $dt/dr$ from B.2: $I dt = -\frac{m\sqrt{GM_E}}{B(r) L r^{3/2}} dr$, explicitly showing $I$ cancels. | 0.5 | **ECF:** If a model error in B.2 prevents $I$ from canceling, award 0 marks from this point onward (model collapse). |
-| | **Integration:** Correctly integrating $\int r^{3/2} dr = \frac{2}{5}r^{5/2}$ | 0.3 | Limits must correspond correctly ($r_1 \to r_2$ with $r_1 > r_2$ or absorbing the negative sign). |
-| | **Final Result:** $Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$ | 0.2 | Expression devoid of $I(t)$ or $R$ automatically satisfies the "prove" requirement. <br>**1.5 pts Total for B.3** |
-| **Subtotal** | **Part B Total** | **4.0** | |
+| Sub-part     | Item / Key Equation                                          | Marks   | Notes for Graders                                            |
+| :----------- | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+| **B.1**      | **Lorentz Force primitive:** $d\vec{F}_L = I d\vec{l} \times \vec{B}$ | 0.3     | Accept integral or macroscopic form $\vec{F}_L = I \vec{L} \times \vec{B}$. |
+|              | **Current direction & cross product:** Identifying current flows from inner to outer satellite (low to high potential), so $d\vec{l} = \hat{r} dr$. | 0.3     |                                                              |
+|              | **Magnitude and Direction:** $F_L = I B(r) L$ and explicitly stating or proving it points opposite to $\vec{v}$ (i.e., $-\hat{\phi}$ direction). | 0.4     | 0.2 for magnitude, 0.2 for direction.                        |
+|              |                                                              |         | **1.0 pt Total for B.1**                                     |
+| **B.2**      | **Total Energy / Angular Momentum:** $E_{tot} = -\frac{GM_E (2m)}{2r} = -\frac{GM_E m}{r}$ <br>*(Alt: $L_{ang} = 2mvr$)* | 0.4     | **Trap:** Forgetting there are *two* satellites (mass $2m$). Deduct 0.2 if total energy is written as $-GM_E m / (2r)$. |
+|              | **Power / Torque relation:** $\frac{dE}{dt} = \vec{F}_L \cdot \vec{v} = -I B L v$<br>*(Alt: $\frac{dL_{ang}}{dt} = \tau = -I B L r$)* | 0.4     | Must include the negative sign indicating dissipation.       |
+|              | **Derivatives with respect to $r$:** Chain rule $\frac{dE}{dt} = \frac{GM_E m}{r^2}\frac{dr}{dt}$ | 0.4     | *(Alt: $\frac{dL_{ang}}{dt} = 2m\sqrt{GM_E} \cdot \frac{1}{2\sqrt{r}}\frac{dr}{dt}$)* |
+|              | **Final Result:** $\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{3/2}}$ | 0.3     | Must substitute B(r) and correctly isolate $dr/dt$. <br>**1.5 pts Total for B.2** |
+| **B.3**      | **Integral setup & variable substitution:** $Q = \int I dt = \int I \left(\frac{dt}{dr}\right) dr$ | 0.5     |                                                              |
+|              | **Canceling Current ($I$):** Substituting $dt/dr$ from B.2: $I dt = -\frac{m\sqrt{GM_E}}{B(r) L r^{3/2}} dr$, explicitly showing $I$ cancels. | 0.5     | **ECF:** If a model error in B.2 prevents $I$ from canceling, award 0 marks from this point onward (model collapse). |
+|              | **Integration:** Correctly integrating $\int r^{3/2} dr = \frac{2}{5}r^{5/2}$ | 0.3     | Limits must correspond correctly ($r_1 \to r_2$ with $r_1 > r_2$ or absorbing the negative sign). |
+|              | **Final Result:** $Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$ | 0.2     | Expression devoid of $I(t)$ or $R$ automatically satisfies the "prove" requirement. <br>**1.5 pts Total for B.3** |
+| **Subtotal** | **Part B Total**                                             | **4.0** |                                                              |
 
 ---
 
 #### Part C: Electro-Thermal Limits and Asymptotic Evolution (Total: 3.0 pts)
 
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **C.1** | **Joule Heating & Radiation:** Identifying $P_{in} = I^2 R$ and thermal radiation $P_{rad} = \epsilon \sigma S T_{eq}^4$. | 0.4 | 0.2 pts for each term. |
-| | **Emission Cooling:** Identifying power carried away by electrons is $P_{emit} = I \frac{\Phi}{e}$. | 0.2 | Setting up full balance: $I^2 R = \epsilon \sigma S T_{eq}^4 + I \frac{\Phi}{e}$ |
-| | **Richardson's Law:** Current balance $I_{sat} = \eta S A_R T_{eq}^2 \exp\left(-\frac{\Phi}{k_B T_{eq}}\right)$ | 0.4 | |
-| | **System closure:** Stating $I = I_{sat}$ and explicitly writing the self-consistent coupled equations. | 0.2 | Both equations must be cleanly presented to get this mark. <br>**1.2 pts Total for C.1** |
-| **C.2** | **Tipping Point Identification:** Recognizing that if limited by the available EMF, the current simply obeys Ohm's Law: $I = \frac{\mathcal{E}}{R}$. | 0.4 | Do not penalize if the student also attempts to solve $T_{eq}$ (extraneous work). |
-| | **Using local EMF:** Substituting $\mathcal{E} = v B L$ so $I = \frac{v B L}{R}$. | 0.4 | |
-| | **Substitution into Decay Rate:** Substituting this $I$ into the formula for $|dr/dt|$ derived in B.2: $\|dr/dt\| = \frac{(vBL/R) B L}{m \sqrt{GM_E} r^{-3/2}}$ | 0.5 | **ECF:** Must use their expression from B.2. |
-| | **Final Simplification:** Using $v = \sqrt{\frac{GM_E}{r}}$ to simplify to final form: $\|dr/dt\| = \frac{B^2 L^2 r}{m R}$ | 0.5 | Result must be strictly in terms of allowable constants/variables ($B, L, r, m, R$). <br>**1.8 pts Total for C.2** |
-| **Subtotal** | **Part C Total** | **3.0** | |
+| Sub-part     | Item / Key Equation                                          | Marks   | Notes for Graders                                            |
+| :----------- | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+| **C.1**      | **Joule Heating & Radiation:** Identifying $P_{in} = I^2 R$ and thermal radiation $P_{rad} = \epsilon \sigma S T_{eq}^4$. | 0.4     | 0.2 pts for each term.                                       |
+|              | **Emission Cooling:** Identifying power carried away by electrons is $P_{emit} = I \frac{\Phi}{e}$. | 0.2     | Setting up full balance: $I^2 R = \epsilon \sigma S T_{eq}^4 + I \frac{\Phi}{e}$ |
+|              | **Richardson's Law:** Current balance $I_{sat} = \eta S A_R T_{eq}^2 \exp\left(-\frac{\Phi}{k_B T_{eq}}\right)$ | 0.4     |                                                              |
+|              | **System closure:** Stating $I = I_{sat}$ and explicitly writing the self-consistent coupled equations. | 0.2     | Both equations must be cleanly presented to get this mark. <br>**1.2 pts Total for C.1** |
+| **C.2**      | **Tipping Point Identification:** Recognizing that if limited by the available EMF, the current simply obeys Ohm's Law: $I = \frac{\mathcal{E}}{R}$. | 0.4     | Do not penalize if the student also attempts to solve $T_{eq}$ (extraneous work). |
+|              | **Using local EMF:** Substituting $\mathcal{E} = v B L$ so $I = \frac{v B L}{R}$. | 0.4     |                                                              |
+|              | **Substitution into Decay Rate:** Substituting this $I$ into the formula for $|dr/dt|$ derived in B.2: $\|dr/dt\| = \frac{(vBL/R) B L}{m \sqrt{GM_E} r^{-3/2}}$ | 0.5     | **ECF:** Must use their expression from B.2.                 |
+|              | **Final Simplification:** Using $v = \sqrt{\frac{GM_E}{r}}$ to simplify to final form: $\|dr/dt\| = \frac{B^2 L^2 r}{m R}$ | 0.5     | Result must be strictly in terms of allowable constants/variables ($B, L, r, m, R$). <br>**1.8 pts Total for C.2** |
+| **Subtotal** | **Part C Total**                                             | **3.0** |                                                              |
 
 ---
 
@@ -297,26 +324,29 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 ![](image/ipho_2025_1_1.png)
 
 # DiagramCode
+
 ### [1] Visual Strategy Plan
 
 **Total number of charts to generate: 2**
 
 **Figure 1: Orbital Configuration and Electrodynamic Induction**
+
 - **Insertion Location**: After the introductory section, immediately before **Part A**.
 - **Drawing Content and Colors**: 
-    - **Global View**: A segment of the Earth (light blue) with a dashed line representing the circular orbital path.
-    - **Tether System**: Two small satellites (dark grey circles) connected by a solid line (tether). The system is oriented radially (pointing toward the Earth's center).
-    - **Vectors**: Orbital velocity $\vec{v}$ (blue arrow, tangential), Magnetic field $\vec{B}$ (green circles with dots $\odot$ representing a field pointing out of the orbital plane), and the radial distance $r$.
-    - **Physical Metaphor**: Use a coordinate frame $(r, \theta)$ to show the "gravity gradient" stabilization.
+  - **Global View**: A segment of the Earth (light blue) with a dashed line representing the circular orbital path.
+  - **Tether System**: Two small satellites (dark grey circles) connected by a solid line (tether). The system is oriented radially (pointing toward the Earth's center).
+  - **Vectors**: Orbital velocity $\vec{v}$ (blue arrow, tangential), Magnetic field $\vec{B}$ (green circles with dots $\odot$ representing a field pointing out of the orbital plane), and the radial distance $r$.
+  - **Physical Metaphor**: Use a coordinate frame $(r, \theta)$ to show the "gravity gradient" stabilization.
 - **Core Symbols**: $R_E$, $r$, $L$, $\vec{v}$, $\vec{B}$, $m$.
 
 **Figure 2: Electrodynamic Forces and Plasma Circuit Model**
+
 - **Insertion Location**: After the transitional text of **Part B**, before sub-question **B.1**.
 - **Drawing Content and Colors**:
-    - **Local View**: A zoomed-in view of the tether.
-    - **Current & Force**: A red arrow along the tether representing the current $I$. A bold orange arrow representing the total Lorentz force $\vec{F}_L$ acting opposite to the velocity $\vec{v}$.
-    - **Circuit**: A dashed light-blue loop representing the "return path" through the ionospheric plasma.
-    - **Thermal Aspect**: Small wavy purple arrows emanating from the tether to represent thermal radiation ($P_{rad}$), linking to the concepts in Part C.
+  - **Local View**: A zoomed-in view of the tether.
+  - **Current & Force**: A red arrow along the tether representing the current $I$. A bold orange arrow representing the total Lorentz force $\vec{F}_L$ acting opposite to the velocity $\vec{v}$.
+  - **Circuit**: A dashed light-blue loop representing the "return path" through the ionospheric plasma.
+  - **Thermal Aspect**: Small wavy purple arrows emanating from the tether to represent thermal radiation ($P_{rad}$), linking to the concepts in Part C.
 - **Core Symbols**: $I$, $\vec{F}_L$, $\vec{v}$, $P_{rad}$, Cathode, Anode.
 
 ---
