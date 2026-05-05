@@ -11,3 +11,12 @@ venv/
 
 # LLM 密钥文件（.env.example 是模板，可以提交；.env 含真实密钥，不可提交）
 .env
+
+scripts/
+schema/
+README.md
+物理竞赛题标注规范和说明-0416.md
+新手指南.md
+最终模板.json
+.gitignore
+workspace.code-workspace
