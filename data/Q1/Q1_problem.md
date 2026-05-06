@@ -297,6 +297,8 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 
 ![](image/ipho_2025_1_1.png)
 
+![](image/model-teacher_2026_1_1.png)
+
 # DiagramCode
 ### [1] Visual Strategy Plan
 
