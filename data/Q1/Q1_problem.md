@@ -1,4 +1,4 @@
-
+# Initial Version
 # Question
 # Orbital Decay and Electro-Thermal Equilibrium of an Electrodynamic Tether
 
