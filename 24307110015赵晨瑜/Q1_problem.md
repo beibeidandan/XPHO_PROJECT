@@ -1,6 +1,7 @@
 
 # Question
 # Orbital Decay and Electro-Thermal Equilibrium of an Electrodynamic Tether
+
 ### Introduction
 Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy and momentum with a planetary magnetic field. In this problem, we consider an EDT system consisting of two identical small satellites, each of mass $m$, connected by a thin, straight, conductive tether of length $L$ and total resistance $R$. The system orbits the Earth in the equatorial plane at an altitude within the ionosphere. Due to the gravity gradient, the tether is stabilized in a radial orientation, pointing toward the Earth’s center.
 
@@ -8,19 +9,23 @@ Electrodynamic tethers (EDTs) are long conducting wires used to exchange energy 
 *   The Earth’s magnetic field can be modeled as a magnetic dipole. In the equatorial plane, the magnetic field is strictly perpendicular to the orbital plane.
 *   The magnitude of the magnetic field at a distance $r$ from the Earth's center is given by:
     $$B(r) = B_0 \left( \frac{R_E}{r} \right)^3$$
-    where $R_E$ is the Earth's radius and $B_0$ is the magnetic field strength at the surface on the equator. It’s direction is the same as the angular velocity of EDT system.
+    where $R_E$ is the Earth's radius and $B_0$ is the magnetic field strength at the surface on the equator.
+*   The mechanical energy of a circular orbit with radius $r$ for a total mass $M_{tot}$ is $E = -\frac{G M_E M_{tot}}{2r}$.
+*   For any $x \ll 1$, the approximation $(1+x)^n \approx 1 + nx$ may be used.
 *   The effective emission area of the cathode is $S_{emit} = \eta S$, where $S$ is the total surface area of the tether and $\eta$ is a dimensionless factor.
+*   The system orbits the Earth counterclockwise as viewed from the North Pole.
 
 ---
 
 ### Part A: Orbital Dynamics and Motional EMF (3.0 points)
 
-Consider the tether system initially moving in a stable circular orbit of radius $r$ ($r \gg L$) in the Earth’s equatorial plane. The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. 
-**A.1.** Under the rotating reference frame, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. **[1.2 pt]**
+Consider the tether system initially moving in a stable circular orbit of radius $r$ ($r \gg L$) in the Earth’s equatorial plane. The mass of the tether is negligible (take $m_{tether} = 0$), so the two satellites are the only significant masses in the system. The center of mass of the system moves at the Keplerian velocity $v$.
 
-**A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Calculate the magnitude of this EMF, $\mathcal{E}$, as a function of $r$, $L$, and the given planetary constants(just keep terms up to the first non-zero order). **[1.0 pt]**
+**A.1.** Using a rotating reference frame centered on the system's center of mass, find the expression for the tension $T_N$ at the midpoint of the tether. Use a first-order Taylor expansion in terms of $L/r$ to simplify your result. Express your result in terms of $G$, $M_E$, $m$, $L$, and $r$. **[1.2 pt]**
 
-**A.3.** Determine the polarity of the induced EMF. Which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.8 pt]**
+**A.2.** As the conductive tether cuts through the Earth's magnetic field lines, a motional electromotive force (EMF) is generated between its ends. Give the expression of this EMF, $\mathcal{E}$, as a function of $r$, $L$. **[1.3 pt]**
+
+**A.3.** Determine the polarity of the induced EMF, in other words, which satellite (the one closer to Earth or the one farther from Earth) accumulates positive charges? **[0.5 pt]**
 
 ---
 
@@ -28,11 +33,11 @@ Consider the tether system initially moving in a stable circular orbit of radius
 
 The tether is immersed in the ionospheric plasma, which is a dilute ionized gas. By using specialized contactors at the ends of the tether (e.g., a hollow cathode at the lower end and an electron collection tether at the upper end), the circuit is closed through the ambient plasma. The plasma acts as a return path with negligible resistance. A steady current $I$ flows through the tether.
 
-**B.1.** Derive the expression for the total Lorentz force $\vec{F}_L$ acting on the tether. Show that this force acts in the direction exactly opposite to the orbital velocity vector $\vec{v}$. (just keep terms up to the first non-zero order)**[1.0 pt]**
+**B.1.** Derive the expression for the total Lorentz force $\vec{F}_L$ acting on the tether. Show that this force acts in the direction exactly opposite to the orbital velocity vector $\vec{v}$. **[1.0 pt]**
 
-**B.2.** Due to the work done by the Lorentz force, the system's mechanical energy dissipates, causing the orbit to decay. Assuming the orbit remains quasi-circular at all times, derive the differential equation for the rate of change of the orbital radius, $dr/dt$, in terms of $I, B_0, R_E, L, m, M_E$, and $r$. **[1.5 pt]**
+**B.2.** Due to the work done by the Lorentz force, the system's mechanical energy dissipates, causing the orbit to decay. Assuming the orbit remains quasi-circular at all times, derive the differential equation for the rate of change of the orbital radius, $dr/dt$, in terms of $I, B_0 L, m, M_E, R_E$, and $r$. **[1.5 pt]**
 
-**B.3.** Let $Q$ be the total charge transferred through the tether as the system descends from an initial radius $r_1$ to a final radius $r_2$. Prove that $Q$ depends only on $r_1, r_2$, and the planetary constants ($M_E, R_E, B_0$), but is independent of the tether's resistance $R$ or the specific time-evolution of the current. Find the expression for $Q$. **[1.5 pt]**
+**B.3.** Let $Q$ be the total charge transferred through the tether as the system descends from an initial radius $r_1$ to a final radius $r_2$. Prove that $Q = \int I dt$ depends only on $r_1, r_2$, and the planetary constants ($M_E, R_E, B_0$), but is independent of the tether's resistance $R$ or the specific time-evolution of the current. Find the expression for $Q$. **[1.5 pt]**
 
 ---
 
@@ -42,11 +47,11 @@ In a realistic scenario, the current $I$ is limited by the ability of the tether
 
 **Useful Information for Part C:**
 *   Stefan-Boltzmann Law: The power radiated by a surface area $S$ with emissivity $\epsilon$ at temperature $T$ is $P_{rad} = \epsilon \sigma S T^4$, where $\sigma$ is the Stefan-Boltzmann constant.
-*   Richardson’s Law for thermionic emission: The saturation current $I$ emitted by a surface $S_{emit}$ at temperature $T$ is given by $I = S_{emit} A_R T^2 \exp\left(-\frac{\Phi}{k_B T}\right)$, where $A_R$ is Richardson's constant and $\Phi$ is the work function. The work function is the minimum energy required to remove an electron from a material into free space.
+*   Richardson’s Law for thermionic emission: The saturation current $I$ emitted by a surface $S_{emit}$ at temperature $T$ is given by $I = S_{emit} A_R T^2 \exp\left(-\frac{\Phi}{k_B T}\right)$, where $A_R$ is Richardson's constant and $\Phi$ is the work function.
 
-**C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy consumed by emitting electrons. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$) and physical constants. **[1.2 pt]**
+**C.1.** The tether reaches a steady-state temperature $T_{eq}$ when the Joule heating power is balanced by thermal radiation into space and the energy carried away by the emitted electrons. The whole system is of the same temperature. Assume each emitted electron carries away a kinetic energy that is negligible compared to the work function $\Phi$, so the energy carried away can be approximately written as $\Phi$. Furthermore, assume the induced EMF $\mathcal{E}$ is sufficiently large such that the current $I$ is exactly the saturation current $I_{sat}$ allowed by the cathode temperature. Assume the total surface area of the system is $S$, and $S_{emit}=\eta S$. Formulate a system of two equations that self-consistently determine the steady-state temperature $T_{eq}$ and the saturated current $I_{sat}$ in terms of the tether's parameters ($R, S, \eta, \epsilon, \Phi$) and the local EMF $\mathcal{E}$. **[1.2 pt]**
 
-**C.2.** Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., the energy consumed by the emitting electrons can be ignored) and the thermal energy is much larger than the work function ($k_B T \gg \Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$. Find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of the tether's material/geometric constants ($S, \epsilon,\eta, \phi, L$), the satellites' mass $m$, and the local orbital parameters ($B, r$). And give the maximum value of r allowed under this condition.  **[1.8 pt]**
+**C.2.** Consider a limit where the system is driven to extreme temperatures such that Joule heating dominates the emission cooling (i.e., $I^2 R \gg I\Phi/e$) and the thermal energy is much larger than the work function ($k_B T \gg \Phi$). Under these asymptotic conditions, the exponential term in Richardson's Law can be approximated as $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$. Assuming the tether is operated at the tipping point where $I_{sat}$ is exactly limited by the available EMF $\mathcal{E}(r)$, find the expression for the orbital decay rate $|dr/dt|$ in this limit, expressed in terms of the tether's material/geometric constants ($S, \epsilon, R, L$), the satellites' mass $m$, and the local orbital parameters ($B, v, r$). **[1.8 pt]**
 
 # QuestionReview
 ### [1] Final Assessment Conclusion
@@ -90,9 +95,9 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 # Answer
 ### Part A
 **[A.1's Standard Solution]**
-- **[Physical Principles]**: The angular velocity of the rotating frame: $\omega = \sqrt{G M_E / r^3}$, the net radial force on a mass $m$ at distance $x$ from the CM is the sum of the gravitational force and the fictitious centrifugal force.
+- **[Physical Principles]**: In a rotating frame centered at the CM (radius $r$) with angular velocity $\omega = \sqrt{G M_E / r^3}$, the net radial force on a mass $m$ at distance $x$ from the CM is the sum of the gravitational force, the centrifugal force and the inertial force caused by the acceleration of the CM.
 - **[Equations]**:
-  The effective radial force is:（taking the outward direction as positive）
+  The effective radial force is:
   $$F_{eff} = m \omega^2 (r+x) - \frac{G M_E m}{(r+x)^2} \quad (1)$$
 - **[Derivation Steps]**:
   Using a first-order Taylor expansion for $x \ll r$:
@@ -113,7 +118,7 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
   $$\mathcal{E} = B_0 R_E^3 L \sqrt{\frac{G M_E}{r^7}}$$
 
 **[A.3's Standard Solution]**
-- **[Physical Principles]**: The induced electric field is $\vec{E}_{ind} = \vec{v} \times \vec{B}$. In the Earth's equatorial plane, $\vec{v}=\vec{w}\times \vec{R}$ is along the orbital tangent(couter-clockwise in the figure) and $\vec{B}$ is directed toward the geographic North (out of the page in the figure).
+- **[Physical Principles]**: The induced electric field is $\vec{E}_{ind} = \vec{v} \times \vec{B}$. In the Earth's equatorial plane, $\vec{v}$ is along the orbital tangent and $\vec{B}$ is directed toward the geographic North.
 - **[Derivation Steps]**:
   Using the right-hand rule, $\vec{v} \times \vec{B}$ points radially outward (away from Earth's center). Positive charges will therefore accumulate at the end further from Earth.
 - **[Final Result]**:
@@ -126,42 +131,42 @@ The phrase "tipping point where $I_{sat}$ is exactly limited by the available EM
 - **[Physical Principles]**: The Lorentz force is $d\vec{F}_L = I d\vec{l} \times \vec{B}$.
 - **[Derivation Steps]**:
   The induced EMF drives a current $I$ from the lower potential (inner) to the higher potential (outer) satellite through the tether. Thus, $d\vec{l}$ is in the $+\hat{r}$ direction.
-  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) =IB_{0}R_{E}^{3}(\int_{r-L/2}^{r+L/2}\frac{1}{r'^{3} }dr')(-\hat{\phi})=\frac{IB_{0}R_{E}^{3}rL}{(r^2-\frac{L^2}{4})^2}(-\hat{\phi})$$
+  $$\vec{F}_L = \int_{r-L/2}^{r+L/2} I (\hat{r} dr') \times (B(r') \hat{z}) = \int I B(r') (-\hat{\phi}) dr'$$
   Since the orbital velocity $\vec{v}$ is in the $+\hat{\phi}$ direction, $\vec{F}_L$ is exactly opposite to $\vec{v}$.
 - **[Final Result]**:
-  Since $r\gg L$, we can ignore the $L^{2}$ term, so $\left | \vec{F} \right | \approx\frac{IB_{0}R_{E}^{3}L}{r^3}$  The total force is $\vec{F}_L \approx - I B(r) L \hat{v}$.
+  The total force is $\vec{F}_L \approx - I B(r) L \hat{v}$.
 
 **[B.2's Standard Solution]**
 - **[Equations]**:
-  Total mechanical energy $E =\frac{1}{2}\times m\times w^2((r+\frac{L}{2})^2+(r-\frac{L}{2})^2)-\frac{GM_{E}m}{r+\frac{L}{2}}-\frac{GM_{E}m}{r-\frac{L}{2}}\approx-\frac{GM_{E}m}{r}, Power dissipated due to the work done by the Lorentz force  $P = \vec{F}_L \cdot \vec{v} = - I B L v$, where $v$ is the velocity of the tether’s center of mass. Since $r\gg L$, the Lorentz force can be evaluated using the magnetic field at the center of mass.
+  Total mechanical energy $E = -\frac{G M_E m}{r}$. Power dissipated $P = \vec{F}_L \cdot \vec{v} = - I B L v$.
 - **[Derivation Steps]**:
-  $$\frac{dE}{dt} = \frac{dE}{dr}\times\frac{dr}{dt}=\frac{G M_E m}{r^2} \frac{dr}{dt} = - I B L \sqrt{\frac{G M_E}{r}}$$
+  $$\frac{dE}{dt} = \frac{G M_E m}{r^2} \frac{dr}{dt} = - I B L \sqrt{\frac{G M_E}{r}}$$
   Solving for $dr/dt$:
 - **[Final Result]**:
   $$\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{3/2}}$$
 
 **[B.3's Standard Solution]**
 - **[Derivation Steps]**:
-  From B.2: $I dt = -\frac{m \sqrt{G M_E} r^{3/2}}{B_0 R_E^3 L} dr$.
-  $$Q = \int I dt= -\int_{r_1}^{r_2} \frac{m \sqrt{G M_E}}{(B_0 R_E^3 r^{-3}) L r^{3/2}} dr = -\frac{m \sqrt{G M_E}}{B_0 R_E^3 L} \int_{r_1}^{r_2} r^{3/2} dr$$
+  $Q = \int I dt = \int \frac{I}{dr/dt} dr$. From B.2: $I dt = -\frac{m \sqrt{G M_E}}{B(r) L r^{3/2}} dr$.
+  $$Q = \int_{r_2}^{r_1} \frac{m \sqrt{G M_E}}{(B_0 R_E^3 r^{-3}) L r^{3/2}} dr = \frac{m \sqrt{G M_E}}{B_0 R_E^3 L} \int_{r_2}^{r_1} r^{3/2} dr$$
 - **[Final Result]**:
-  $$Q =\frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$$
+  $$Q = \frac{2m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$$
 
 ---
 
 ### Part C
 **[C.1's Standard Solution]**
 - **[Equations]**:
-In unit time, $$\frac{I}{e}$$ electrons “escape” from the cathode, and the work required to overcome the binding is $$\frac{I\Phi}{e}$$
-1. Energy balance: $I^2 R = \epsilon \sigma S T_{eq}^4 + \frac{I \Phi}{e}$
-Since  $\mathcal{E}$ is sufficiently large so as not to restrict I, so I=I_{sat}. 
-2. Current balance: $I=I_{sat} = \eta S A_R T_{eq}^2 \exp\left(-\frac{\Phi}{k_B T_{eq}}\right)$
+  1. Energy balance: $I_{sat}^2 R = \epsilon \sigma S T_{eq}^4 + \frac{I_{sat} \Phi}{e}$
+  2. Current balance: $I_{sat} = \eta S A_R T_{eq}^2 \exp\left(-\frac{\Phi}{k_B T_{eq}}\right)$
 
 **[C.2's Standard Solution]**
 - **[Derivation Steps]**:
-  In the limit,$I^2 R \gg I \Phi/e$, so the equation1 simplify to $I^2 R \approx \epsilon \sigma S T^4$. And use the approximate $\exp(-\Phi/k_B T) \approx 1 - \Phi/k_B T$, we get $ I \approx \eta S A_R T^2(1-\frac{\Phi}{k_{B}T})$. Solve these two equations simultaneously to obtain $I = \sqrt{\frac{\epsilon \sigma S}{R}}\left(\frac{\frac{\Phi}{k_B}}{1 - \frac{1}{\eta S A_R}\sqrt{\frac{\epsilon \sigma S}{R}}}\right)^2$, thus from B.2, $\left|\frac{dr}{dt}\right|=\frac{B_0 R_E^3 L}{m \sqrt{G M_E}\, r^{3/2}}\sqrt{\frac{\epsilon \sigma S}{R}}\left(\frac{\frac{\Phi}{k_B}}{1 - \frac{1}{\eta S A_R}\sqrt{\frac{\epsilon \sigma S}{R}}}\right)^2$.
-The $\mathcal{E}$ should satisfy $\mathcal{E}> IR$,thus B(r)Lv> IR, we can eventually obtain $r_{max}=\sqrt[7]{\frac{B_{0}^2 R_{E}^6 L^2 G M_{E}}{I^2 R^2}}$, where $I = \sqrt{\frac{\epsilon \sigma S}{R}}\left(\frac{\frac{\Phi}{k_B}}{1 - \frac{1}{\eta S A_R}\sqrt{\frac{\epsilon \sigma S}{R}}}\right)^2$.
-
+  In the limit $I^2 R \gg I \Phi/e$ and $k_B T \gg \Phi$, the equations simplify to $I^2 R \approx \epsilon \sigma S T^4$ and $I \approx \eta S A_R T^2$. At the tipping point, the current is determined by the maximum available EMF: $I = \mathcal{E}/R$.
+  Substitute $I = \frac{B L v}{R}$ into the decay rate $|dr/dt| = \frac{I B L r}{m v}$ (from B.2):
+  $$|dr/dt| = \frac{(B L v / R) B L r}{m v} = \frac{B^2 L^2 r}{m R}$$
+- **[Final Result]**:
+  $$|dr/dt| = \frac{B^2 L^2 r}{m R}$$
 
 # AnswerValidation
 ### [Part 1: Derivation Rigor Audit]
@@ -241,71 +246,19 @@ The $\mathcal{E}$ should satisfy $\mathcal{E}> IR$,thus B(r)Lv> IR, we can event
 
 | Sub-part | Item / Key Equation | Marks | Notes for Graders |
 | :--- | :--- | :--- | :--- |
-| **A.1** | **Angular velocity:** $\omega = \sqrt{GM_E/r^3}$ | 0.2 | |
-| | **Effective force:** $F_{eff}=m\omega^2(r+x)-\frac{GM_E m}{(r+x)^2}$ | 0.4 | Direction convention should be clear. |
-| | **First-order expansion:** $F_{eff}\approx \frac{3GM_E m}{r^3}x$ | 0.1 | |
-| | **Uniform tension:** Tension is uniform because $m_{tether}=0$. | 0.2 | Must state that the tether mass is neglected. |
-| | **Final Result:** $T_N=\frac{3GM_E mL}{2r^3}$ | 0.3 | |
-| **Subtotal** | **A.1 Total** | **1.2** | |
-
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **A.2** | **Motional EMF:** $\mathcal{E}=\int v(r')B(r')\,dr'$ | 0.3 | |
-| | **Substitution:** $v=\omega r'$, $B=B_0\left(\frac{R_E}{r'}\right)^3$ | 0.3 | |
-| | **Final Result:** $\mathcal{E}=B_0R_E^3L\sqrt{\frac{GM_E}{r^7}}$ | 0.4 | Approximation steps must be shown. |
-| **Subtotal** | **A.2 Total** | **1.0** | |
-
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **A.3** | **Velocity direction:** $\vec v=\vec\omega\times\vec r$ | 0.2 | |
-| | **Induced electric field:** $\vec E=\vec v\times\vec B$, directed radially outward. | 0.3 | |
-| | **Conclusion:** The farther end from Earth is positively charged. | 0.3 | |
-| **Subtotal** | **A.3 Total** | **0.8** | |
-
----
-
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **B.1** | **Lorentz force:** $d\vec F=I(d\vec l\times\vec B)$ | 0.2 | |
-| | **Total force integral:** $\vec F_L=\int I(d\vec l\times\vec B)$ | 0.3 | |
-| | **Approximation:** $\vec F_L\approx -IBL$ | 0.2 | |
-| | **Direction:** $\vec F_L$ is opposite to $\vec v$. | 0.3 | Clear explanation using both words and formula is accepted. |
-| **Subtotal** | **B.1 Total** | **1.0** | |
-
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **B.2** | **Orbital energy:** $E=K+U=\frac12mv^2-\frac{GM_E m}{r}\approx-\frac{GM_E m}{r}$ | 0.4 | 0.2 for writing kinetic plus potential energy; 0.2 for the approximation. |
-| | **Power:** $\frac{dE}{dt}=-IBLv$ | 0.4 | |
-| | **Differential relation:** $\frac{GM_E m}{r^2}\frac{dr}{dt}=-IBL\sqrt{\frac{GM_E}{r}}$ | 0.4 | If the negative sign is missing, award only half credit for this item. |
-| | **Final Result:** $\frac{dr}{dt}=-\frac{IB_0R_E^3L}{m\sqrt{GM_E}r^{3/2}}$ | 0.3 | |
-| **Subtotal** | **B.2 Total** | **1.5** | |
-
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **B.3** | **Substitution:** $I\,dt=-\frac{m\sqrt{GM_E}}{B_0R_E^3L}r^{3/2}\,dr$ | 0.4 | |
-| | **Charge:** $Q=\int I\,dt$ | 0.4 | |
-| | **Integration:** $\int r^{3/2}dr=\frac25r^{5/2}$ | 0.4 | |
-| | **Final Result:** $Q=\frac{2m\sqrt{GM_E}}{5B_0R_E^3L}(r_1^{5/2}-r_2^{5/2})$ | 0.3 | |
-| **Subtotal** | **B.3 Total** | **1.5** | |
-
----
-
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **C.1** | **Emission power:** Energy per unit time is $\frac{I\Phi}{e}$ | 0.2 | |
-| | **Energy balance:** $I^2R=\epsilon\sigma ST^4+\frac{I\Phi}{e}$ | 0.4 | If this equation is correct, it may cover the previous item. |
-| | **Saturation current condition:** $I=I_{sat}$ | 0.2 | |
-| | **Emission current:** $I=\eta S A_RT^2\exp\left(-\frac{\Phi}{k_BT}\right)$ | 0.4 | |
-| **Subtotal** | **C.1 Total** | **1.2** | |
-
-| Sub-part | Item / Key Equation | Marks | Notes for Graders |
-| :--- | :--- | :--- | :--- |
-| **C.2** | **Approximate equations:** $I^2R\approx\epsilon\sigma ST^4$ and $I\approx\eta S A_RT^2\left(1-\frac{\Phi}{k_BT}\right)$ | 0.6 | 0.3 for each equation. |
-| | **Current expression:** $I=\sqrt{\frac{\epsilon\sigma S}{R}}\left[\frac{\Phi/k_B}{1-\frac{1}{\eta S A_R}\sqrt{\frac{\epsilon\sigma S}{R}}}\right]^2$ | 0.2 | |
-| | **Decay rate:** $\frac{dr}{dt}=\frac{B_0R_E^3L}{m\sqrt{GM_E}r^{3/2}}I$ | 0.3 | |
-| | **Condition:** $\mathcal{E}>IR$, or $B(r)Lv>IR$ | 0.4 | |
-| | **Maximum radius:** $r_{max}=\left(\frac{B_0^2R_E^6L^2GM_E}{I^2R^2}\right)^{1/7}$ | 0.3 | Full substitution of $I$ is not required. |
-| **Subtotal** | **C.2 Total** | **1.8** | |
+| **B.1** | **Lorentz Force primitive:** $d\vec{F}_L = I d\vec{l} \times \vec{B}$ | 0.3 | Accept integral or macroscopic form $\vec{F}_L = I \vec{L} \times \vec{B}$. |
+| | **Current direction & cross product:** Identifying current flows from inner to outer satellite (low to high potential), so $d\vec{l} = \hat{r} dr$. | 0.3 | |
+| | **Magnitude and Direction:** $F_L = I B(r) L$ and explicitly stating or proving it points opposite to $\vec{v}$ (i.e., $-\hat{\phi}$ direction). | 0.4 | 0.2 for magnitude, 0.2 for direction. |
+| | | | **1.0 pt Total for B.1** |
+| **B.2** | **Total Energy / Angular Momentum:** $E_{tot} = -\frac{GM_E (2m)}{2r} = -\frac{GM_E m}{r}$ <br>*(Alt: $L_{ang} = 2mvr$)* | 0.4 | **Trap:** Forgetting there are *two* satellites (mass $2m$). Deduct 0.2 if total energy is written as $-GM_E m / (2r)$. |
+| | **Power / Torque relation:** $\frac{dE}{dt} = \vec{F}_L \cdot \vec{v} = -I B L v$<br>*(Alt: $\frac{dL_{ang}}{dt} = \tau = -I B L r$)* | 0.4 | Must include the negative sign indicating dissipation. |
+| | **Derivatives with respect to $r$:** Chain rule $\frac{dE}{dt} = \frac{GM_E m}{r^2}\frac{dr}{dt}$ | 0.4 | *(Alt: $\frac{dL_{ang}}{dt} = 2m\sqrt{GM_E} \cdot \frac{1}{2\sqrt{r}}\frac{dr}{dt}$)* |
+| | **Final Result:** $\frac{dr}{dt} = - \frac{I B_0 R_E^3 L}{m \sqrt{G M_E} r^{3/2}}$ | 0.3 | Must substitute B(r) and correctly isolate $dr/dt$. <br>**1.5 pts Total for B.2** |
+| **B.3** | **Integral setup & variable substitution:** $Q = \int I dt = \int I \left(\frac{dt}{dr}\right) dr$ | 0.5 | |
+| | **Canceling Current ($I$):** Substituting $dt/dr$ from B.2: $I dt = -\frac{m\sqrt{GM_E}}{B(r) L r^{3/2}} dr$, explicitly showing $I$ cancels. | 0.5 | **ECF:** If a model error in B.2 prevents $I$ from canceling, award 0 marks from this point onward (model collapse). |
+| | **Integration:** Correctly integrating $\int r^{3/2} dr = \frac{2}{5}r^{5/2}$ | 0.3 | Limits must correspond correctly ($r_1 \to r_2$ with $r_1 > r_2$ or absorbing the negative sign). |
+| | **Final Result:** $Q = \frac{2 m \sqrt{G M_E}}{5 B_0 R_E^3 L} (r_1^{5/2} - r_2^{5/2})$ | 0.2 | Expression devoid of $I(t)$ or $R$ automatically satisfies the "prove" requirement. <br>**1.5 pts Total for B.3** |
+| **Subtotal** | **Part B Total** | **4.0** | |
 
 ---
 
@@ -345,6 +298,8 @@ The $\mathcal{E}$ should satisfy $\mathcal{E}> IR$,thus B(r)Lv> IR, we can event
 
 ![](image/ipho_2025_1_1.png)
 
+![](image/model-teacher_2026_1_1.png)
+
 # DiagramCode
 ### [1] Visual Strategy Plan
 
@@ -376,115 +331,122 @@ The $\mathcal{E}$ should satisfy $\mathcal{E}> IR$,thus B(r)Lv> IR, we can event
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
+
+# Use Matplotlib native MathText rendering to avoid external LaTeX dependency errors
 plt.rcParams.update({
     "text.usetex": False,
-    "mathtext.fontset": "cm",
+    "mathtext.fontset": "cm",  # Use Computer Modern academic math font
     "font.family": "serif",
     "font.size": 11
 })
 
 def generate_figure_1():
+    """Draw Figure 1: Orbital Configuration and Motional EMF."""
     fig, ax = plt.subplots(figsize=(7, 6))
     ax.set_aspect('equal')
     ax.axis('off')
 
-    earth = patches.Circle((0, 0), 2.0, color='#AADDFF', ec='#5588AA', lw=2)
+    # Earth Representation
+    earth_radius = 2.0
+    earth = patches.Circle((0, 0), earth_radius, color='#AADDFF', ec='#5588AA', lw=2, label='Earth')
     ax.add_patch(earth)
     ax.text(0, 0, r'Earth ($M_E$)', ha='center', va='center', fontsize=12, fontweight='bold')
+
+    # Orbit Path
     orbit_r = 5.0
-    orbit_arc = patches.Arc((0, 0), 2*orbit_r, 2*orbit_r,
-                            theta1=20, theta2=70,
-                            ls='--', color='gray', alpha=0.6)
+    orbit_arc = patches.Arc((0, 0), 2*orbit_r, 2*orbit_r, theta1=20, theta2=70, ls='--', color='gray', alpha=0.6)
     ax.add_patch(orbit_arc)
+
+    # Tether System at theta = 45 degrees
     angle = np.deg2rad(45)
-    r1, r2 = orbit_r - 0.6, orbit_r + 0.6
-    x1, y1 = r1*np.cos(angle), r1*np.sin(angle)
-    x2, y2 = r2*np.cos(angle), r2*np.sin(angle)
+    r1 = orbit_r - 0.6
+    r2 = orbit_r + 0.6
+    x1, y1 = r1 * np.cos(angle), r1 * np.sin(angle)
+    x2, y2 = r2 * np.cos(angle), r2 * np.sin(angle)
+    
+    # Satellites
+    ax.plot([x1, x2], [y1, y2], color='black', lw=2, zorder=3)
+    ax.scatter([x1, x2], [y1, y2], color='#444444', s=80, zorder=4)
+    ax.text(x1-0.2, y1-0.4, r'$m$', ha='center')
+    ax.text(x2+0.2, y2+0.3, r'$m$', ha='center')
+    
+    # Labels for geometry
+    ax.annotate('', xy=(x2, y2), xytext=(x1, y1), arrowprops=dict(arrowstyle='<->', color='black'))
+    ax.text((x1+x2)/2 + 0.3, (y1+y2)/2, r'$L$', fontsize=12)
+    
+    # Radius vector
+    ax.annotate('', xy=(x1, y1), xytext=(0, 0), arrowprops=dict(arrowstyle='->', color='black', ls=':'))
+    ax.text(1.2, 2.2, r'$r$', fontsize=12)
 
-    ax.plot([x1, x2], [y1, y2], color='black', lw=2)
-    ax.scatter([x1, x2], [y1, y2], color='#444444', s=80)
-
-    ax.text(x1-0.2, y1-0.4, r'$m$')
-    ax.text(x2+0.2, y2+0.3, r'$m$')
-
-    ax.annotate('', xy=(x2, y2), xytext=(x1, y1),
-                arrowprops=dict(arrowstyle='<->'))
-    ax.text((x1+x2)/2 + 0.3, (y1+y2)/2, r'$L$')
-
-    ax.annotate('', xy=(x1, y1), xytext=(0, 0),
-                arrowprops=dict(arrowstyle='->', ls=':'))
-    ax.text(1.2, 2.2, r'$r$')
+    # Velocity Vector
     v_dir = np.array([-np.sin(angle), np.cos(angle)])
     v_start = np.array([(x1+x2)/2, (y1+y2)/2])
-    ax.quiver(v_start[0], v_start[1], v_dir[0], v_dir[1],
-              color='blue', scale=4, width=0.015)
-    ax.text(v_start[0]-1.0, v_start[1]+0.2,
-            r'$\vec{v}$', color='blue', fontsize=18)
+    ax.quiver(v_start[0], v_start[1], v_dir[0], v_dir[1], color='blue', scale=4, width=0.015, zorder=5)
+    ax.text(v_start[0]-0.8, v_start[1]+0.5, r'$\vec{v}$', color='blue', fontsize=14)
+
+    # B-field (Out of page)
     for i in range(3):
         for j in range(3):
-            ax.text(3.5+i*0.8, 0.5+j*0.8, r'$\odot$',
-                    color='forestgreen', ha='center')
+            bx, by = 3.5 + i*0.8, 0.5 + j*0.8
+            ax.text(bx, by, r'$\odot$', color='forestgreen', fontsize=15, ha='center', va='center')
+    ax.text(5.5, 1.5, r'$\vec{B}$', color='forestgreen', fontsize=14)
 
-    ax.text(5.5, 1.5, r'$\vec{B}$', color='forestgreen')
-
-    plt.title("Fig 1: EDT Orbital Configuration")
+    plt.title("Fig 1: EDT Orbital Configuration in Equatorial Plane", pad=20)
     plt.tight_layout()
-    plt.savefig("Figure_1.png", dpi=300)
-    plt.close()
+    plt.savefig("Figure_1.png", dpi=300, bbox_inches='tight')
+    plt.close(fig)
     print("Figure_1.png generated successfully.")
 
 def generate_figure_2():
+    """Draw Figure 2: Electrodynamic Forces and Circuit Model."""
     fig, ax = plt.subplots(figsize=(7, 5))
     ax.set_aspect('equal')
     ax.axis('off')
 
-    ax.plot([0, 0], [-2, 2], color='black', lw=3)
-    ax.scatter([0, 0], [-2, 2], color='#444444', s=150)
+    # The Tether
+    tether_y = np.linspace(-2, 2, 100)
+    tether_x = np.zeros_like(tether_y)
+    ax.plot(tether_x, tether_y, color='black', lw=3, zorder=3)
+    
+    # Satellites (Anode and Cathode)
+    ax.scatter([0, 0], [-2, 2], color='#444444', s=150, zorder=4)
     ax.text(0.3, 2, 'Upper Sat (Anode)', va='center')
     ax.text(0.3, -2, 'Lower Sat (Cathode)', va='center')
 
-    ax.annotate('', xy=(0, 0.6), xytext=(0, -0.6),
-                arrowprops=dict(arrowstyle='->', color='red', lw=2))
-    ax.text(-0.35, 0, r'$I$', color='red', fontsize=14)
+    # Current I
+    ax.annotate('', xy=(0, 0.5), xytext=(0, -0.5), arrowprops=dict(arrowstyle='->', color='red', lw=2))
+    ax.text(-0.4, 0, r'$I$', color='red', fontsize=14, fontweight='bold')
 
-    ax.quiver(0, 0, 1.4, 0, color='blue', scale=5, width=0.02)
-    ax.text(0.6, 0.35, r"$\vec{F}_L$", color='blue', fontsize=14)
+    # Lorentz Force F_L
+    ax.quiver(0, 0, -1.5, 0, color='orangered', scale=5, width=0.02, zorder=5)
+    ax.text(-1.2, 0.3, r"$\vec{F}_L$", color='orangered', fontsize=14)
+    
+    # Velocity v
+    ax.quiver(0, 0, 1.5, 0, color='blue', scale=5, width=0.01, alpha=0.5)
+    ax.text(1.0, 0.3, r"$\vec{v}$", color='blue', fontsize=14)
 
-    ax.text(-1.35, 0.32, r"$\vec{v}$", color='black', fontsize=14)
-    ax.annotate(
-        '',
-        xy=(-1.55, 0.08),
-        xytext=(-0.45, 0.08),
-        arrowprops=dict(arrowstyle='->', color='black', lw=1.5)
-    )
+    # Plasma Return Path
+    arc_theta = np.linspace(-np.pi/2, np.pi/2, 50)
+    arc_x = 1.5 * np.cos(arc_theta)
+    arc_y = 2.0 * np.sin(arc_theta)
+    ax.plot(arc_x, arc_y, color='skyblue', ls='--', lw=2, alpha=0.7)
+    ax.text(1.6, 0, 'Ionospheric\nPlasma Path', color='skyblue', ha='left', fontsize=10)
 
-    ax.annotate(
-        '',
-        xy=(-0.45, -0.2),
-        xytext=(-1.55, -0.2),
-        arrowprops=dict(arrowstyle='->', color='black', lw=1.5)
-    )
+    # Thermal Radiation (Part C context)
+    for y_pos in [-1.2, 0, 1.2]:
+        for direction in [-1, 1]:
+            dx = 0.3 * direction
+            ax.annotate('', xy=(dx*2, y_pos+0.2), xytext=(dx, y_pos),
+                         arrowprops=dict(arrowstyle='->', connectionstyle="arc3,rad=.3", color='purple', alpha=0.6))
+    ax.text(-1.2, -1.8, r'$P_{rad} \propto T^4$', color='purple', fontsize=10)
 
-    theta = np.linspace(-np.pi/2, np.pi/2, 50)
-    ax.plot(1.5*np.cos(theta), 2*np.sin(theta),
-            color='skyblue', ls='--')
-    ax.text(1.6, 0, 'Plasma Path', color='skyblue')
+    # B field symbol
+    ax.text(-1.5, 2, r'$\vec{B} = \odot$', color='forestgreen', fontsize=14)
 
-    for y in [1.2, 0.2, -0.8]:
-        ax.annotate('',
-                    xy=(1.0, y-0.5),
-                    xytext=(1.0, y+0.2),
-                    arrowprops=dict(arrowstyle='->',
-                                    connectionstyle="arc3,rad=-0.25",
-                                    color='red'))
-
-    ax.text(0.5, -1.8, r'$P_{rad} \propto T^4$', color='red')
-    ax.text(-1.5, 2, r'$\vec{B} = \odot$', color='forestgreen')
-
-    plt.title("Fig 2: Forces and Circuit")
+    plt.title("Fig 2: Electrodynamic Forces and Plasma Return Circuit", pad=20)
     plt.tight_layout()
-    plt.savefig("Figure_2.png", dpi=300)
-    plt.close()
+    plt.savefig("Figure_2.png", dpi=300, bbox_inches='tight')
+    plt.close(fig)
     print("Figure_2.png generated successfully.")
 
 if __name__ == "__main__":
@@ -492,4 +454,7 @@ if __name__ == "__main__":
     generate_figure_2()
     print("All figures generated for IPhO Problem 1.")
 ```
+
+
+
 
